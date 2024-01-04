@@ -1,15 +1,36 @@
-
+import AboutPage from "../Components/AboutPage";
 import FlickityCarousel from "../Components/FlickityCarousel";
 import Header from "../Components/Header";
-// import { useState } from "react";
 
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+const pageRoutes = createBrowserRouter([
+  {
+    path: "/",
+    element: <Header />, // <Outlet /> on this component allows access to children.
+    children: [
+      {
+        path: "/projects",
+        element: (
+          <FlickityCarousel />
+        ),
+      },
+      {
+        path: "/about",
+        element: (
+          <AboutPage />
+        ),
+
+      }
+    ]
+  }
+])
 const HomePage = () => {
   return (
     <>
-      <Header />
-      <div className="headerBorder"></div>
-      <FlickityCarousel />
+      <RouterProvider router={pageRoutes} />
+   
     </>
   );
 };

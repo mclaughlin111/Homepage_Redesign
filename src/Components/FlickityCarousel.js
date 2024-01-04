@@ -1,3 +1,5 @@
+import React from "react";
+
 import Flickity from "react-flickity-component";
 import pentaxImage from "../Assets/pentaxcamera.jpg";
 import youtubeImage from "../Assets/youtubelink.jpg";

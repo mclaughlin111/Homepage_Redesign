@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Toggle from "react-toggle";
 import { MdLightMode } from "react-icons/md";
 import { MdDarkMode } from "react-icons/md";
+import React from "react";
 
  const LightDarkToggle = () => {
   const [dark, setIsDark] = useState(true);

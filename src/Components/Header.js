@@ -1,39 +1,46 @@
 import React from "react";
 import LightDarkToggle from "./LightDarkToggle";
-
+import { Link, Outlet } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header class="pageHeader">
-      <div>
-        <p id="title">Thomas McLaughlin Online</p>
-      </div>
+    <>
+      <header class="pageHeader">
+        <div>
+          <p id="title">Thomas McLaughlin Online</p>
+        </div>
 
-      <div id="switcher">
-        <a className="switch" id="projects" href="/">
-          Projects
-        </a>
-        <div className="switch" id="line">
-          |
+        <div id="switcher">
+          <a className="switch" id="projects" href="/">
+            <Link className="switch" id="projects" to="/projects">
+              Projects
+            </Link>
+          </a>
+          <div className="switch" id="line">
+            |
+          </div>
+
+          <Link className="switch" id="projects" to="/about">
+            About
+          </Link>
+
+          <div className="switch" id="line">
+            |
+          </div>
+          <a className="switch" id="contact" href="mailto:mail@tommcl.co.uk">
+            Contact
+          </a>
+          <div className="switch" id="line">
+            |
+          </div>
+          <span id="toggle">
+            <LightDarkToggle />
+          </span>
         </div>
-        <a className="switch" id="about" href="/about">
-          About
-        </a>
-        <div className="switch" id="line">
-          |
-        </div>
-        <a className="switch" id="contact" href="mailto:mail@tommcl.co.uk">
-          Contact
-        </a>
-        <div className="switch" id="line">
-          |
-        </div>
-        <span id="toggle">
-        <LightDarkToggle  />
-        </span>
-      </div>
-     
-    </header>
+      </header>
+      <div className="headerBorder"></div>
+      <Outlet />
+    </>
   );
 };
 
