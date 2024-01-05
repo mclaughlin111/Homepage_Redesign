@@ -30,8 +30,13 @@
 border: 1px solid white;
   filter: saturate(100%);
 }
-.cvLink {}
+.cvLink {
+  color: #19F;
+}
 
+.cvLink:active {
+  color: white;
+}
 
 .headerBorder {
   margin-left: 1em;

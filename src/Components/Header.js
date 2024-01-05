@@ -1,5 +1,6 @@
 import React from "react";
 import LightDarkToggle from "./LightDarkToggle";
+import FlickityCarousel from "../Components/FlickityCarousel";
 import { Link, Outlet } from "react-router-dom";
 
 const Header = () => {
@@ -12,7 +13,7 @@ const Header = () => {
 
         <div id="switcher">
           <a className="switch" id="projects" href="/">
-            <Link className="switch" id="projects" to="/projects">
+            <Link className="switch" id="projects" to="/">
               Projects
             </Link>
           </a>
@@ -40,6 +41,7 @@ const Header = () => {
       </header>
       <div className="headerBorder"></div>
       <Outlet />
+<FlickityCarousel />
     </>
   );
 };
