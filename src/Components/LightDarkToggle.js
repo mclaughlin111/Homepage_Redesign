@@ -24,6 +24,10 @@ import React from "react";
       document.querySelector('.react-toggle-track-x').style.display = "none";
       document.querySelector('.react-toggle-track-check').style.display = "inline-block";
 
+      //header underline div
+      document.querySelector('.headerBorder').classList.add('headerBorderLight')
+
+
     } else {
       //remove dark mode for
       // Body
@@ -38,6 +42,9 @@ import React from "react";
          //toggle 
       document.querySelector('.react-toggle-track-x').style.display = "inline-block";
       document.querySelector('.react-toggle-track-check').style.display = "none";
+
+       //header underline div
+       document.querySelector('.headerBorder').classList.remove('headerBorderLight')
 
     }
   }, [dark]); 

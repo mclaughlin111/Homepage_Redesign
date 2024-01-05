@@ -1,8 +1,9 @@
 import React from "react";
 
 import Flickity from "react-flickity-component";
-import pentaxImage from "../Assets/pentaxcamera.jpg";
-import youtubeImage from "../Assets/youtubelink.jpg";
+import pentaxImage from "../Assets/pentaxcamera.jpeg";
+import youtubeImage from "../Assets/youtubelink.jpeg";
+import gameImage from "../Assets/gamelink.jpeg";
 import "../flickity.css"
 
 const flickityOptions = {
@@ -19,8 +20,9 @@ const FlickityCarousel = () => {
     <Flickity options={flickityOptions}>
   
 
-<img src={pentaxImage} alt="pentaxImage" className="carousel-image"/>
-<img src={youtubeImage} alt="youtubeImage" className="carousel-image"/>
+<a href="tommcl.co.uk/photosfilm"><img  src={pentaxImage} alt="pentaxImage" className="carousel-image"/></a>
+<a href="https://www.youtube.com/@ThomasMYoutube"><img src={youtubeImage} alt="youtubeImage" className="carousel-image"/></a>
+<a href="tommcl.co.uk/game"><img src={gameImage} alt="gameImage" className="carousel-image" id="gameImage"/></a>
   </Flickity>
 
   </div>

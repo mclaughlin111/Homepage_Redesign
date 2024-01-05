@@ -1,4 +1,4 @@
-import AboutPage from "../Components/AboutPage";
+import About from "../Components/About";
 import FlickityCarousel from "../Components/FlickityCarousel";
 import Header from "../Components/Header";
 
@@ -19,7 +19,7 @@ const pageRoutes = createBrowserRouter([
       {
         path: "/about",
         element: (
-          <AboutPage />
+          <About />
         ),
 
       }
