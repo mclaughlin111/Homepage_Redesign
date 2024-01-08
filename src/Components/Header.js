@@ -33,7 +33,7 @@ const Header = () => {
           <div className="switch" id="line">
             |
           </div>
-          <span id="toggle">
+          <span id="toggle" title="Click To Switch Mode">
             <LightDarkToggle />
           </span>
         </div>
