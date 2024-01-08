@@ -9,9 +9,9 @@ https://flickity.metafizzy.co
 .flickity-enabled:focus { outline: none; }
 
 .flickity-viewport {
-  overflow: hidden;
+  overflow: scroll;
   position: relative;
-  height: 70vh;
+  height: 80vh; 
   touch-action: pan-y;
 }
 

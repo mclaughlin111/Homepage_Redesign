@@ -12,7 +12,7 @@ const Header = () => {
 
         <div id="switcher">
           <a className="switch" id="projects" href="/">
-            <Link className="switch" id="projects" to="/projects">
+            <Link className="switch" id="projects" to="/home/projects">
               Projects
             </Link>
           </a>
@@ -20,7 +20,7 @@ const Header = () => {
             |
           </div>
 
-          <Link className="switch" id="projects" to="/about">
+          <Link className="switch" id="projects" to="/home/about">
             About
           </Link>
 
@@ -39,7 +39,7 @@ const Header = () => {
         </div>
       </header>
       <div className="headerBorder"></div>
-      <Outlet />
+    <Outlet />
     </>
   );
 };

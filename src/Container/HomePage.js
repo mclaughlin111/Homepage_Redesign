@@ -7,17 +7,21 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const pageRoutes = createBrowserRouter([
   {
-    path: "/",
+    path: "/home",
     element: <Header />, // <Outlet /> on this component allows access to children.
     children: [
       {
-        path: "/projects",
+        path: "/home/", // Root path for Header
+        element: <FlickityCarousel />,
+      },
+      {
+        path: "/home/projects/",
         element: (
           <FlickityCarousel />
         ),
       },
       {
-        path: "/about",
+        path: "/home/about/",
         element: (
           <About />
         ),
@@ -30,7 +34,7 @@ const HomePage = () => {
   return (
     <>
       <RouterProvider router={pageRoutes} />
-   
+
     </>
   );
 };
