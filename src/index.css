@@ -4,6 +4,15 @@
   transition-timing-function: cubic-bezier(0.810, 0.150, 0.250, 0.940);
 } */
 
+.footer {
+  text-decoration: underline;
+  text-align: center;
+  opacity: 50%;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  /* font-size: 0.8vw; */
+}
 
 .about {
   margin-left: 1em;
@@ -85,7 +94,7 @@ cursor: pointer;
 }
 
 #title:hover {
-  /* opacity: 1 transition-duration 0.28s; */
+
 }
 
 .pageHeader {
@@ -199,22 +208,6 @@ cursor: pointer;
 }
 
 
-.footer {
-  position: static;
-  color: white;
-  opacity: 50%;
-  font-family: Gill sans;
-  font-style: normal;
-  font-size: 0.8vw;
-  font-weight: normal;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  /* background-color: grey; */
-}
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 1499px) {

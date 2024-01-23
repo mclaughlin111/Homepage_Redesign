@@ -34,7 +34,7 @@ const HomePage = () => {
   return (
     <>
       <RouterProvider router={pageRoutes} />
-
+    <footer className="footer">©2024</footer>
     </>
   );
 };

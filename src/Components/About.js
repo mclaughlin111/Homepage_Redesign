@@ -38,7 +38,7 @@ const About = () => {
       </div>
       
       <img src={Profile} alt="Profile" className="profileImage"></img>
-      <img src={Dog} alt="Dog" title="mydog" className="profileImage" id="wilbur"></img>
+      {/* <img src={Dog} alt="Dog" title="mydog" className="profileImage" id="wilbur"></img> */}
     </div>
     </>
   );
