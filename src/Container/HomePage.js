@@ -1,4 +1,5 @@
 import About from "../Components/About";
+import ContentGrid from "../Components/ContentGrid";
 import FlickityCarousel from "../Components/FlickityCarousel";
 import Header from "../Components/Header";
 
@@ -12,12 +13,12 @@ const pageRoutes = createBrowserRouter([
     children: [
       {
         path: "/home/", // Root path for Header
-        element: <FlickityCarousel />,
+        element: <ContentGrid />,
       },
       {
         path: "/home/projects/",
         element: (
-          <FlickityCarousel />
+          <ContentGrid />
         ),
       },
       {

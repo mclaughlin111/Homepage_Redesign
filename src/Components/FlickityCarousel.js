@@ -23,7 +23,7 @@ const FlickityCarousel = () => {
     <Flickity options={flickityOptions}>
   
 
-<div className="carouselItemContainer"><a href="/photosfilm"><img  src={pentaxImage} alt="pentaxImage" className="carousel-image"/></a><p className="carouselItemDescription">Photography Gallery</p></div>
+<div className="carouselItemContainer"><a href="http://photos.tommcl.co.uk/"><img  src={pentaxImage} alt="pentaxImage" className="carousel-image"/></a><p className="carouselItemDescription">Photography Gallery</p></div>
 
 <div className="carouselItemContainer"><a href="/pitchkick"><img src={pitchKick} alt="pitchKickLogo" className="carousel-image"/></a><p className="carouselItemDescription">PitchKick</p></div>
 
