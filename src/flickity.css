@@ -1,7 +1,9 @@
 /*! Flickity v3.0.0
 https://flickity.metafizzy.co
 ---------------------------------------------- */
-
+.carousel img {
+  width: 90%;
+}
 .flickity-enabled {
   position: relative;
 }
@@ -9,9 +11,9 @@ https://flickity.metafizzy.co
 .flickity-enabled:focus { outline: none; }
 
 .flickity-viewport {
-  overflow: scroll;
+  overflow: hidden;
   position: relative;
-  height: 75vh !important; 
+  height: 70vh !important; 
   touch-action: pan-y;
 }
 

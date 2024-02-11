@@ -1,0 +1,46 @@
+/* layout */
+.table {
+  margin-left: 1em;
+  margin-top: 1em;
+  text-align: left;
+  width: 100%;
+}
+
+/* top row borders */
+.table tr.topRow {
+  border-top: 1px solid white;
+}
+
+/* Remove border-top for all rows after the first (excluding the header) */
+.table tr:not(.topRow) {
+  border-top: none;
+}
+
+.table img {
+  width: 35px;
+  height: auto;
+  /* display: block; */
+}
+
+td:nth-child(1),
+th:nth-child(1) {
+  width: 0px;
+  padding-right: 5px;
+}
+
+/* table heading style */
+th {
+  border-bottom: 1em solid transparent;
+  font-weight: 600;
+}
+
+/* animation */
+td:hover {
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
+
+/* font */
+.tableDescription {
+  font-weight: lighter;
+}

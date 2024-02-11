@@ -1,6 +1,5 @@
 import About from "../Components/About";
-import ContentGrid from "../Components/ContentGrid";
-import FlickityCarousel from "../Components/FlickityCarousel";
+import Projects from "../Components/Projects";
 import Header from "../Components/Header";
 
 import React from "react";
@@ -8,21 +7,21 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const pageRoutes = createBrowserRouter([
   {
-    path: "/home",
+    path: "/",
     element: <Header />, // <Outlet /> on this component allows access to children.
     children: [
       {
-        path: "/home/", // Root path for Header
-        element: <ContentGrid />,
+        path: "/", // Root path for Header
+        element: <Projects />,
       },
       {
-        path: "/home/projects/",
+        path: "/projects/",
         element: (
-          <ContentGrid />
+          <Projects />
         ),
       },
       {
-        path: "/home/about/",
+        path: "/about/",
         element: (
           <About />
         ),
