@@ -1,4 +1,3 @@
-/* Header Border CSS */
 /* * {
    transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.810, 0.150, 0.250, 0.940);
@@ -33,6 +32,57 @@
   --br: 3px;
   --padding: var(--ms-0);
   --baseline: calc(var(--ms-0) * 1.45);
+}
+
+a {
+  color: var(--blue)
+}
+
+
+
+/* Header CSS */
+.headerBorder {
+  margin-left: 1em;
+  margin-right: 1em;
+  height: 2.5px;
+  border-radius: 15px;
+  background-color: white;
+
+}
+
+.headerBorderLight {
+  background-color: black;
+
+}
+
+.pageHeader {
+
+  opacity: 100%;
+  backdrop-filter: blur(20px);
+  display: flex;
+  position: sticky;
+  top: 0;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-left: 1em;
+  margin-right: 1em;
+
+}
+
+.pageHeaderLight {
+  background-color: rgb(255, 255, 255);
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
+  display: flex;
+  position: sticky;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 1em;
+  margin-right: 1em;
+
+  border-bottom-width: 100%;
+
 }
 
 
@@ -70,29 +120,16 @@
 
 .profileImage:hover {
   /* width | style | color */
-border: 1px solid white;
+  border: 1px solid white;
   filter: saturate(100%);
 }
+
 .cvLink {
   color: rgb(0, 191, 255);
 }
 
 
-.headerBorder {
-  position: sticky;
-  margin-left: 1em;
-  margin-right: 1em;
-  /* margin-top: 0px; */
-  height: 2px;
-  border-radius: 15px;
-  background-color: white;
-  /* transition-duration: 500ms; */
-  transition-timing-function: ease-in-out;
-}
 
-.headerBorderLight {
-  background-color: black
-}
 
 
 /* carousel CSS */
@@ -106,8 +143,8 @@ border: 1px solid white;
 
 
 #toggle {
-transform: translateY(4px);
-cursor: pointer;
+  transform: translateY(4px);
+  cursor: pointer;
 }
 
 
@@ -125,41 +162,8 @@ cursor: pointer;
   margin-right: auto;
 }
 
-#title:hover {
 
-}
 
-.pageHeader {
-  z-index: 1;
-  /* transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.810, 0.150, 0.250, 0.940); */
-  display: flex;
-  position: sticky;
-  /* background-color: rgb(0, 0, 0); */
-  top: 0;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-left: 1em;
-  margin-right: 1em;
-
-}
-
-.pageHeaderLight {
-  z-index: 1;
-  transition-duration: 250ms;
-  transition-timing-function: ease-in-out;
-  display: flex;
-  position: sticky;
-  /* background-color: rgb(0, 0, 0); */
-  /* top: 0; */
-  flex-direction: row;
-  justify-content: space-between;
-  margin-left: 1em;
-  margin-right: 1em;
-  /* border-bottom: 2px solid rgb(0, 0, 0); */
-  border-bottom-width: 100%;
-  /* padding-bottom: 2px; */
-}
 
 .pageHeaderscroll {
   /* transition-duration: 250ms;
@@ -205,6 +209,7 @@ cursor: pointer;
   font-weight: normal;
   transition-duration: 0.28s;
 }
+
 .switchlight {
   color: rgb(93, 92, 92);
   font-family: Gill sans;
@@ -217,8 +222,9 @@ cursor: pointer;
 
 .switch:hover {
   color: white;
- 
+
 }
+
 .switchlight:hover {
   color: black;
 
@@ -244,7 +250,7 @@ cursor: pointer;
 
 /* iphone  */
 @media screen and (min-width: 1px) and (max-width: 600px) {
-  
+
 
   #title {
     font-size: 1.3rem;
@@ -257,7 +263,7 @@ cursor: pointer;
     justify-content: center;
     align-items: center;
     text-align: center;
-    
+
   }
 
   .profileImage {
@@ -270,14 +276,12 @@ cursor: pointer;
   }
 }
 
-@media screen and (min-width: 501px) and (max-width: 799px) {
- 
-}
+@media screen and (min-width: 501px) and (max-width: 799px) {}
 
 
 /* desktop, tablet,  */
 @media screen and (min-width: 1399px) and (max-width: 1499px) {
-  
+
 
 
   #title,
@@ -305,8 +309,8 @@ body {
   color: white;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   transition-duration: 500ms;
-  transition-timing-function: ease-in-out;  
-} 
+  transition-timing-function: ease-in-out;
+}
 
 
 .bodylight {
@@ -335,4 +339,3 @@ body {
   mix-blend-mode: multiply;
   filter: contrast(1);
 }
-
