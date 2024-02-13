@@ -1,4 +1,4 @@
-# _tommcl.co.uk/home_ 
+# _tommcl.co.uk
 ### HomePage Redesign: Using React, Mobile Friendly, Clear, Concise, Readable, Extendable
 
 ##Feature Thought
