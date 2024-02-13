@@ -1,0 +1,29 @@
+
+[
+    {
+      "name": "Photos",
+      "description": "Image gallery to showcase personal photography, built around the lightgallery.js plugin",
+      "link": "http://www.photos.tommcl.co.uk/",
+      "queryLink": "https://www.lightgalleryjs.com/",
+      "image": "../Assets/pentaxImage.jpg"
+    },
+    {
+      "name": "Pitch Kick",
+      "description": "A sandbox Analog style kick drum synth built to test out the tone.js framework",
+      "link": "https://tommcl.co.uk/pithkick",
+      "queryLink": "https://www.lightgalleryjs.com/",
+      "image": "../Assets/pitchKick.jpg"
+    },
+    {
+      "name": "Memory Game",
+      "description": "Interactive level-based puzzle game to test and develop memory recall.",
+      "link": "https://tommcl.co.uk/game/",
+      "image": "../Assets/gameImage.png"
+    },
+    {
+      "name": "Youtube",
+      "description": "Youtube channel with videos relating to music / audio / sound-engineering",
+      "link": "https://www.youtube.com/channel/UCSr397y_jFgZg76tbndxv8A",
+      "image": "../Assets/youtubelink.jpeg"
+    }
+  ]

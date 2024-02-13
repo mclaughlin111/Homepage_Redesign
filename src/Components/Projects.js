@@ -3,10 +3,12 @@ import ContentList from "./ContentList";
 import FlickityCarousel from "../Components/FlickityCarousel";
 import { TbCarouselHorizontal } from "react-icons/tb";
 import { PiListFill } from "react-icons/pi";
-import "../projects.css" 
+import { IoGrid } from "react-icons/io5";
+import "../projects.css";
+import ContentGrid from "./ContentGrid";
 
 const Projects = () => {
-  const [activeComponent, setActiveComponent] = useState("contentGrid");
+  const [activeComponent, setActiveComponent] = useState("flickityCarousel");
 
   const handleToggleComponent = (component) => {
     setActiveComponent(component);
@@ -16,19 +18,35 @@ const Projects = () => {
     <div>
       <nav>
         <ul>
-          <li>
-            <PiListFill onClick={() => handleToggleComponent("contentGrid")} />
+          <li
+            className={activeComponent === "contentList" ? "active" : ""}
+            onClick={() => handleToggleComponent("contentList")}
+          >
+            <PiListFill />
           </li>
-          <li>
-            <TbCarouselHorizontal
-              onClick={() => handleToggleComponent("flickityCarousel")}
-            />
+          <li
+            className={activeComponent === "flickityCarousel" ? "active" : ""}
+            onClick={() => handleToggleComponent("flickityCarousel")}
+          >
+            <TbCarouselHorizontal />
+          </li>
+          <li
+            className={activeComponent === "contentGrid" ? "active" : ""}
+            onClick={() => handleToggleComponent("contentGrid")}
+          >
+            <IoGrid />
           </li>
         </ul>
+        <div
+          className={`selector ${
+            activeComponent === "flickityCarousel" ? "right" : ""
+          }`}
+        />
       </nav>
 
-      {activeComponent === "contentGrid" && <ContentList />}
+      {activeComponent === "contentList" && <ContentList />}
       {activeComponent === "flickityCarousel" && <FlickityCarousel />}
+      {activeComponent === "contentGrid" && <ContentGrid />}
     </div>
   );
 };

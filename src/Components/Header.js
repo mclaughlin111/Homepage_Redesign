@@ -4,15 +4,17 @@ import { Link, Outlet } from "react-router-dom";
 
 const Header = () => {
   return (
-    <>
+    <div className="headerContainer">
+
       <header class="pageHeader">
+      <div className="headerBorder"></div>
         <div>
           <p id="title">Thomas McLaughlin Online</p>
         </div>
 
         <div id="switcher">
           <a className="switch" id="projects" href="/">
-            <Link className="switch" id="projects" to="/home/projects">
+            <Link className="switch" id="projects" to="/projects">
               Projects
             </Link>
           </a>
@@ -20,7 +22,7 @@ const Header = () => {
             |
           </div>
 
-          <Link className="switch" id="projects" to="/home/about">
+          <Link className="switch" id="projects" to="/about">
             About
           </Link>
 
@@ -38,9 +40,9 @@ const Header = () => {
           </span>
         </div>
       </header>
-      <div className="headerBorder"></div>
-    <Outlet />
-    </>
+      
+      <Outlet />
+    </div>
   );
 };
 

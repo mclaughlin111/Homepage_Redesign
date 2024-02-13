@@ -1,0 +1,18 @@
+/* contentgrid.css */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30vw, 1fr)); /* Adjust as needed */
+    gap: 0.5em;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+  }
+  
+  .grid-item {
+    text-align: center;
+  }
+  
+  .gridImage {
+    width: 100%; /* Ensure images take up the full width of the container */
+    height: auto;
+  }
