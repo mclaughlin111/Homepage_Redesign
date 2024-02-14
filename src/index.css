@@ -40,64 +40,6 @@ a {
 
 
 
-/* Header CSS */
-.headerContainer {
-  position: relative;
-}
-
-.pageHeader {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: black;
-  margin-left: 1em;
-  margin-right: 1em;
-  position: sticky;
-  top: 0;
-  z-index: 1; /* Adjust the z-index as needed */
-  /* filter blur */
-  backdrop-filter: blur(50px);
-  mix-blend-mode: multiply; 
-}
-
-.headerBorder {
-  /* margin-left: 1em; */
-  /* margin-right: 1em; */
-  height: 2.5px;
-  border-radius: 15px;
-  background-color: white;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 2; /* Adjust the z-index as needed */
-}
-
-.headerBorderLight {
-  background-color: black;
-}
-
-.pageHeaderLight {
-  background-color: rgb(255, 255, 255);
-  transition-duration: 250ms;
-  transition-timing-function: ease-in-out;
-  display: flex;
-  position: sticky;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-left: 1em;
-  margin-right: 1em;
-
-  border-bottom-width: 100%;
-}
-.headerContainer {
- 
-  position: sticky;
-  top: 0;
-  z-index: 1000; /* Adjust the z-index as needed */
-}
-
-
 
 .footer {
   text-decoration: underline;
@@ -154,120 +96,14 @@ a {
 }
 
 
-#toggle {
-  transform: translateY(4px);
-  cursor: pointer;
-}
-
-
-#toggleComponent {
-  display: none;
-}
-
-
-#titlegroup {
-  color: white;
-  font-family: Gill sans;
-  font-style: normal;
-  font-size: 20px;
-  font-weight: normal;
-  margin-right: auto;
-}
-
-
-
-
-.pageHeaderscroll {
-  /* transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.810, 0.150, 0.250, 0.940); */
-  /* font-size: 60%; */
-  margin-left: 0em;
-  margin-right: 0em;
-  font-size: 4%;
-  opacity: 0.3;
-  /* height: 60px; */
-  border-bottom: 2px solid rgb(0, 0, 0);
-}
-
-#title {
-  font-family: Gill sans;
-  padding: 0.9em;
-  border: 1.5em;
-}
-
-.titlescroll {
-  padding: 0.4em;
-  border: 1.5em;
-  margin: 0px;
-
-}
-
-#title:hover {
-  /* transition-duration: 250ms;
-  transition-timing-function: ease-in-out; */
-  background-color: rgba(255, 255, 255, 0.102);
-}
-
-#switcher {
-  display: flex;
-  align-self: center;
-
-}
-
-.switch {
-  color: rgb(93, 92, 92);
-  font-family: Gill sans;
-  font-style: normal;
-  font-weight: normal;
-  transition-duration: 0.28s;
-}
-
-.switchlight {
-  color: rgb(93, 92, 92);
-  font-family: Gill sans;
-  font-style: normal;
-  font-weight: normal;
-
-  transition-duration: 0.28s;
-}
-
-
-.switch:hover {
-  color: white;
-
-}
-
-.switchlight:hover {
-  color: black;
-
-}
-
-#line {
-  padding-left: 2px;
-  padding-right: 2px;
-  opacity: 0.5 !important;
-}
-
-
-
 /* MEDIA QUERIES */
 @media screen and (max-width: 1499px) {
 
-
-  #title,
-  .switch {
-    font-size: 1.5rem;
-  }
 }
 
 /* iphone  */
 @media screen and (min-width: 1px) and (max-width: 600px) {
 
-
-  #title {
-    font-size: 1.3rem;
-
-  }
 
   .about {
     font-size: 1.3rem;
@@ -283,9 +119,6 @@ a {
     margin-left: 0em;
   }
 
-  .switch {
-    font-size: 1.3rem;
-  }
 }
 
 @media screen and (min-width: 501px) and (max-width: 799px) {}
@@ -296,22 +129,12 @@ a {
 
 
 
-  #title,
-  .switch {
-    font-size: 1.5rem;
-    /* !important */
-  }
+
 }
 
 
 @media screen and (min-width: 1500px) {
 
-
-  #title,
-  .switch {
-    font-size: 1.8rem;
-    /* !important */
-  }
 }
 
 /* END MEDIA QUERIES */
@@ -335,7 +158,7 @@ body {
 
 .carouselItemDescription {
   font-weight: 200;
-  opacity: 0.2;
+  opacity: 0;
   margin-top: 2px;
   transition-duration: 250ms;
   transition-timing-function: ease-in-out;

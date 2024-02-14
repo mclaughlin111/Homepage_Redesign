@@ -1,11 +1,11 @@
 import React from "react";
 import LightDarkToggle from "./LightDarkToggle";
 import { Link, Outlet } from "react-router-dom";
+import "../header.css";
 
 const Header = () => {
   return (
     <div className="headerContainer">
-
       <header class="pageHeader">
       <div className="headerBorder"></div>
         <div>
@@ -18,7 +18,7 @@ const Header = () => {
               Projects
             </Link>
           </a>
-          <div className="switch" id="line">
+          <div className="divLine">
             |
           </div>
 
@@ -26,13 +26,13 @@ const Header = () => {
             About
           </Link>
 
-          <div className="switch" id="line">
+          <div className="divLine">
             |
           </div>
           <a className="switch" id="contact" href="mailto:mail@tommcl.co.uk">
             Contact
           </a>
-          <div className="switch" id="line">
+          <div className="divLine" >
             |
           </div>
           <span id="toggle" title="Click To Switch Mode">
