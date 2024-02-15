@@ -1,14 +1,15 @@
 nav {
-  width: fit-content;
+  /* width: fit-content; */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 40px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5px;
+  margin-top: 10px;
   /* overflow: hidden; */
   transition: background-color 0.6s ease-in-out;
+  /* background-color: aqua; */
 }
 
 nav ul {
@@ -18,23 +19,20 @@ nav ul {
 }
 
 nav li {
-  padding: 4px; /* Add padding around the icon */
+  padding: 5px; 
   cursor: pointer;
   transition: all 0.1s ease-in-out;
-  border-radius: 5px; 
-  margin-right: 5px; /* Add some space between icons */
-  
+  border-radius: 30%; 
+ 
 }
 
 nav li:hover {
-  background-color: rgba(158, 158, 158, 0.399); 
+  background-color: rgba(158, 158, 158, 0.399);
 }
 
-nav li.active {
-  background-color: rgba(138, 138, 138, 0.548); 
-}
 
-nav li:active {
-  /* transform: scale(1.2); */
-}
+.active {
+  background-color: rgb(187, 187, 187);
+  border-radius: 30%;
 
+}
