@@ -28,7 +28,7 @@ const ContentList = () => {
           <a href="https://tonejs.github.io/">tone.js</a> framework
         </>
       ),
-      link: "https://tommcl.co.uk/pithkick",
+      link: "https://tommcl.co.uk/pitchkick",
       queryLink: "https://www.lightgalleryjs.com/",
       image: pitchKick,
     },

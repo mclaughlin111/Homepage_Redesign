@@ -10,7 +10,7 @@
     {
       "name": "Pitch Kick",
       "description": "A sandbox Analog style kick drum synth built to test out the tone.js framework",
-      "link": "https://tommcl.co.uk/pithkick",
+      "link": "https://tommcl.co.uk/pitchkick",
       "queryLink": "https://www.lightgalleryjs.com/",
       "image": "../Assets/pitchKick.jpg"
     },

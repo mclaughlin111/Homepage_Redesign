@@ -3,7 +3,6 @@ import ContentList from "./ContentList";
 import FlickityCarousel from "../Components/FlickityCarousel";
 import { TbCarouselHorizontal } from "react-icons/tb";
 import { PiListFill } from "react-icons/pi";
-import { IoGrid } from "react-icons/io5";
 import { BsFillGridFill } from "react-icons/bs";
 import "../projects.css";
 import ContentGrid from "./ContentGrid";
@@ -15,8 +14,11 @@ const Projects = () => {
     setActiveComponent(component);
   };
 
+
   return (
+    
     <div>
+
       <nav>
       <ul>
   <div className={activeComponent === "contentList" ? "active" : ""}>

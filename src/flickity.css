@@ -5,9 +5,7 @@ https://flickity.metafizzy.co
 .flickity-button {
   z-index: -1;
 }
-.carousel img {
-  width: 90%;
-}
+
 .flickity-enabled {
   position: relative;
 }

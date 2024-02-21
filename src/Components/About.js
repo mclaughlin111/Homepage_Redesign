@@ -18,7 +18,7 @@ const About = () => {
           Download {" "}
           <a
             className="cvLink"
-            href="https://tommcl.co.uk/home/TomMcLaughlin_CV.pdf"
+            href="https://tommcl.co.uk/home/Thomas_McLaughlin_CV.pdf"
           >
             CV
           </a>
