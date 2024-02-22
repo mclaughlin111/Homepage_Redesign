@@ -90,7 +90,7 @@ const ContentList = () => {
             <img src={item.image} alt={`${item.name}`} className="tableImage" />
           </a>
         </td>
-          <td className="topRow">{item.name}</td>
+          <td className={item.name}>{item.name}</td>
           <td className="tableDescription topRow">
             {item.description} 
           </td>

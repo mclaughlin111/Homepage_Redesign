@@ -3,10 +3,11 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
+  height: 35px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;
+  margin-top: 15px;
+  margin-bottom: 5px;
   /* overflow: hidden; */
   transition: background-color 0.6s ease-in-out;
   /* background-color: aqua; */
@@ -19,20 +20,24 @@ nav ul {
 }
 
 nav li {
+  margin: 5px;
   padding: 5px; 
   cursor: pointer;
-  transition: all 0.1s ease-in-out;
-  border-radius: 30%; 
+  transition: all 0.95s ease-in-out;
+  border-radius: 25%;
  
 }
 
-nav li:hover {
+/* nav li:hover {
+  margin: 5px;
+  padding: 5px; 
+  border-radius: 25%;
   background-color: rgba(158, 158, 158, 0.399);
-}
+} */
 
 
 .active {
-  background-color: rgb(187, 187, 187);
-  border-radius: 30%;
+  background-color: rgb(57, 57, 57);
+  border-radius: 25%;
 
 }

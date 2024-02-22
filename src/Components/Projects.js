@@ -6,6 +6,8 @@ import { PiListFill } from "react-icons/pi";
 import { BsFillGridFill } from "react-icons/bs";
 import "../projects.css";
 import ContentGrid from "./ContentGrid";
+import MyNavBar from "./MyNavBar";
+
 
 const Projects = () => {
   const [activeComponent, setActiveComponent] = useState("flickityCarousel");
@@ -18,7 +20,7 @@ const Projects = () => {
   return (
     
     <div>
-
+      {/* <MyNavBar /> */}
       <nav>
       <ul>
   <div className={activeComponent === "contentList" ? "active" : ""}>

@@ -1,24 +1,21 @@
 // Import necessary dependencies
 import React, { useState } from "react";
 import { motion} from "framer-motion";
+import "../navbar.css";
 
 // Your navigation items
 const navItems = [
   {
     path: "/",
-    name: "Home",
+    name: "List",
   },
   {
     path: "/now",
-    name: "Now",
+    name: "Carousel",
   },
   {
     path: "/guestbook",
-    name: "Guestbook",
-  },
-  {
-    path: "/writing",
-    name: "Writing",
+    name: "Grid",
   },
 ];
 
@@ -65,10 +62,10 @@ function MyNavBar() {
                   }}
                   transition={{
                     type: "spring",
-                    bounce: 0.25,
-                    stiffness: 130,
+                    bounce: 0.5,
+                    stiffness: 1000,
                     damping: 9,
-                    duration: 0.3,
+                    duration: 0.7,
                   }}
                 />
               )}

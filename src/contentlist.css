@@ -11,11 +11,6 @@
   border-top: 1px solid white;
 }
 
-/* Remove border-top for all rows after the first (excluding the header) */
-.table tr:not(.topRow) {
-  border-top: none;
-}
-
 .table img {
   width: 35px;
   height: auto;
@@ -24,12 +19,9 @@
   transition: border 0.2s ease-in-out;
 }
 
-
 .table img:hover {
   border: 1px solid white;
- 
 }
-
 
 td:nth-child(1),
 th:nth-child(1) {
@@ -41,6 +33,7 @@ th:nth-child(1) {
 th {
   border-bottom: 1em solid transparent;
   font-weight: 600;
+  text-decoration: underline;
 }
 
 /* animation */
@@ -52,4 +45,27 @@ td:hover {
 /* font */
 .tableDescription {
   font-weight: lighter;
+}
+
+/* Target table data in columns 2 and 3 (excluding the first and last column) on hover */
+.table td:nth-child(n+2):not(:last-child) {
+  position: relative;
+}
+
+/* Add a transparent border to the content, and set the hover styles for the border */
+.table td:nth-child(n+2):not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  transition: border 0.2s ease-in-out;
+}
+
+/* Set the border color on hover */
+.table td:nth-child(n+2):not(:last-child):hover::before {
+  border: 1px solid rgb(110, 110, 110);
 }
