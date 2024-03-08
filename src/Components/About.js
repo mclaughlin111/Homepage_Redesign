@@ -10,7 +10,7 @@ const About = () => {
     <div className="about">
       <div>
         <p>Personal Website of Thomas McLaughlin</p>
-        <p>Aspiring Full Stack Developer</p>
+    
         <hr className="aboutPageBreak"/>
         
         <div className="aboutList"> 

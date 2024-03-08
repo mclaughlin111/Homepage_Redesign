@@ -4,6 +4,7 @@ import Header from "../Components/Header";
 
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Tabs from "../Components/Tabs";
 
 const pageRoutes = createBrowserRouter([
   {
@@ -12,12 +13,12 @@ const pageRoutes = createBrowserRouter([
     children: [
       {
         path: "/", // Root path for Header
-        element: <Projects />,
+        element: <Tabs />,
       },
       {
         path: "/projects/",
         element: (
-          <Projects />
+          <Tabs />
         ),
       },
       {

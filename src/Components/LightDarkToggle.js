@@ -1,62 +1,67 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Toggle from "react-toggle";
-import { MdLightMode } from "react-icons/md";
-import { MdDarkMode } from "react-icons/md";
-import React from "react";
+import { MdLightMode, MdDarkMode } from "react-icons/md";
 
- const LightDarkToggle = () => {
+const LightDarkToggle = () => {
   const [dark, setIsDark] = useState(true);
 
   useEffect(() => {
+    const setActiveIconLight = (isLightMode) => {
+      // Check if .activeIcon exists before querying
+      const activeIcons = document.querySelectorAll('.activeIcon');
+      if (activeIcons.length > 0) {
+        activeIcons.forEach((activeIcon) => {
+          if (isLightMode) {
+            activeIcon.classList.add('activeIconLight');
+          } else {
+            activeIcon.classList.remove('activeIconLight');
+          }
+        });
+      }
+    };
+
     if (dark === false) {
-      //Add Light Mode For
-      // Body
+      // Add Light Mode styles
       document.querySelector('body').classList.add('bodylight');
-      // Switches
       const switches = document.querySelectorAll('.switch');
       switches.forEach((singleSwitch) => {
         singleSwitch.classList.add('switchlight');
       });
-      
-      //underline
-      document.querySelector('.pageHeader').classList.add('pageHeaderLight')
-      //toggle 
+      document.querySelector('.pageHeader').classList.add('pageHeaderLight');
       document.querySelector('.react-toggle-track-x').style.display = "none";
       document.querySelector('.react-toggle-track-check').style.display = "inline-block";
+      document.querySelector('.headerBorder').classList.add('headerBorderLight');
 
-      //header underline div
-      document.querySelector('.headerBorder').classList.add('headerBorderLight')
-
-
+      
+      // Add Light Mode for .activeIcon
+      setActiveIconLight(true);
     } else {
-      //remove dark mode for
-      // Body
+      // Remove Dark Mode styles
       document.querySelector('body').classList.remove('bodylight');
-       // Switches
-       const switches = document.querySelectorAll('.switch');
-       switches.forEach((singleSwitch) => {
-         singleSwitch.classList.remove('switchlight');
-       });
-       //underline
-       document.querySelector('.pageHeader').classList.remove('pageHeaderLight')
-         //toggle 
+      const switches = document.querySelectorAll('.switch');
+      switches.forEach((singleSwitch) => {
+        singleSwitch.classList.remove('switchlight');
+      });
+      document.querySelector('.pageHeader').classList.remove('pageHeaderLight');
       document.querySelector('.react-toggle-track-x').style.display = "inline-block";
       document.querySelector('.react-toggle-track-check').style.display = "none";
+      document.querySelector('.headerBorder').classList.remove('headerBorderLight');
 
-       //header underline div
-       document.querySelector('.headerBorder').classList.remove('headerBorderLight')
-
+      
+      // Remove Light Mode for .activeIcon
+      setActiveIconLight(false);
     }
-  }, [dark]); 
+  }, [dark]);
 
-  const toggleDark = <MdDarkMode className="switch" id='darkToggle'/>
-  const toggleLight = <MdLightMode className="switch" id='lightToggle'/>
+  const toggleDark = <MdDarkMode className="switch" id='darkToggle' />;
+  const toggleLight = <MdLightMode className="switch" id='lightToggle' />;
 
   return (
-    <Toggle id="toggleComponent"
+    <Toggle
+      id="toggleComponent"
       checked={dark}
       onChange={({ target }) => setIsDark(target.checked)}
-      icons={{ checked: (toggleDark), unchecked: (toggleLight) }}
+      icons={{ checked: toggleDark, unchecked: toggleLight }}
       aria-label="Dark mode toggle"
     />
   );

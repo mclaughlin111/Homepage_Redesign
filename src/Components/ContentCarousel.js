@@ -16,7 +16,7 @@ friction: 1,
 draggable: true,
 };
 
-const FlickityCarousel = () => {
+const ContentCarousel = () => {
   return (
     <div className="carousel">
 
@@ -39,4 +39,4 @@ const FlickityCarousel = () => {
   );
 };
 
-export default FlickityCarousel;
+export default ContentCarousel;
