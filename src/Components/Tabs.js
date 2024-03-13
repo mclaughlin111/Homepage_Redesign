@@ -19,6 +19,8 @@ const tabsData = [
   }
 ];
 
+
+
 const Tabs = () => {
   const [tabBoundingBox, setTabBoundingBox] = React.useState(null);
   const [wrapperBoundingBox, setWrapperBoundingBox] = React.useState(null);
@@ -47,7 +49,7 @@ const Tabs = () => {
 
   if (tabBoundingBox && wrapperBoundingBox) {
     highlightStyles.transitionDuration = isHoveredFromNull ? "0ms" : "150ms";
-    highlightStyles.opacity = highlightedTab ? 1 : 0;
+    highlightStyles.opacity = 1;
     highlightStyles.width = `${tabBoundingBox.width}px`;
     highlightStyles.transform = `translate(${
       tabBoundingBox.left - wrapperBoundingBox.left

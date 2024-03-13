@@ -5,46 +5,48 @@ import gameImage from "../Assets/gamelink.png";
 import pitchKick from "../Assets/pitchkick.jpeg";
 import "../contentlist.css";
 
-const ContentList = () => {
-  const items = [
-    {
-      name: "Photos",
+const items = [
+  {
+    name: "Photos",
 
-      description: (
-        <>
-         Image gallery to showcase personal photography, built around the{" "}
-          <a href="https://www.lightgalleryjs.com/">lightgallery.js</a> plugin
-        </>
-      ),
-      link: "http://www.photos.tommcl.co.uk/",
-      queryLink: "https://www.lightgalleryjs.com/",
-      image: pentaxImage,
-    },
-    {
-      name: "Pitch Kick",
-      description: (
-        <>
-          A sandbox Analog style kick drum synth built to test out the{" "}
-          <a href="https://tonejs.github.io/">tone.js</a> framework
-        </>
-      ),
-      link: "https://tommcl.co.uk/pitchkick",
-      queryLink: "https://www.lightgalleryjs.com/",
-      image: pitchKick,
-    },
-    {
-      name: "Memory Game",
-      description: "Interactive level-based puzzle game to test and develop memory recall.",
-      link: "https://tommcl.co.uk/game/",
-      image: gameImage,
-    },
-    {
-      name: "Youtube",
-      description: "Youtube channel with videos relating to music / audio / sound-engineering",
-      link: "https://www.youtube.com/channel/UCSr397y_jFgZg76tbndxv8A",
-      image: youtubeImage,
-    },
-  ];
+    description: (
+      <>
+       Image gallery to showcase personal photography, built around the{" "}
+        <a href="https://www.lightgalleryjs.com/">lightgallery.js</a> plugin
+      </>
+    ),
+    link: "http://www.photos.tommcl.co.uk/",
+    queryLink: "https://www.lightgalleryjs.com/",
+    image: pentaxImage,
+  },
+  {
+    name: "Pitch Kick",
+    description: (
+      <>
+        A sandbox Analog style kick drum synth built to test out the{" "}
+        <a href="https://tonejs.github.io/">tone.js</a> framework
+      </>
+    ),
+    link: "https://tommcl.co.uk/pitchkick",
+    queryLink: "https://www.lightgalleryjs.com/",
+    image: pitchKick,
+  },
+  {
+    name: "Memory Game",
+    description: "Interactive level-based puzzle game to test and develop memory recall.",
+    link: "https://tommcl.co.uk/game/",
+    image: gameImage,
+  },
+  {
+    name: "Youtube",
+    description: "Youtube channel with videos relating to music / audio / sound-engineering",
+    link: "https://www.youtube.com/channel/UCSr397y_jFgZg76tbndxv8A",
+    image: youtubeImage,
+  },
+];
+
+
+const ContentList = () => {
 
   const [lastUpdatedDates, setLastUpdatedDates] = useState({});
 
@@ -55,9 +57,14 @@ const ContentList = () => {
   
       for (const item of items) {
         try {
-          const response = await fetch(item.queryLink);
-          const lastUpdated = response.headers.get("last-modified");
-          updatedDates[item.name] = lastUpdated;
+          if (item.queryLink) {
+            const response = await fetch(item.queryLink);
+            const lastUpdated = response.headers.get("last-modified");
+            updatedDates[item.name] = lastUpdated;
+          } else {
+            // Set lastUpdatedDates to "-" if queryLink is undefined/null
+            updatedDates[item.name] = "-";
+          }
         } catch (error) {
           errors.push({ itemName: item.name, error });
           updatedDates[item.name] = "-";
