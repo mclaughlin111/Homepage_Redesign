@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import ContentGrid from "./ContentGrid";
 import ContentList from "./ContentList";
@@ -19,17 +19,29 @@ const tabsData = [
   }
 ];
 
-
-
 const Tabs = () => {
-  const [tabBoundingBox, setTabBoundingBox] = React.useState(null);
-  const [wrapperBoundingBox, setWrapperBoundingBox] = React.useState(null);
-  const [highlightedTab, setHighlightedTab] = React.useState(null);
-  const [isHoveredFromNull, setIsHoveredFromNull] = React.useState(true);
-  const [selectedComponent, setSelectedComponent] = React.useState("carousel");
+  const [tabBoundingBox, setTabBoundingBox] = useState(null);
+  const [wrapperBoundingBox, setWrapperBoundingBox] = useState(null);
+  const [highlightedTab, setHighlightedTab] = useState(null);
+  const [isHoveredFromNull, setIsHoveredFromNull] = useState(true);
+  const [selectedComponent, setSelectedComponent] = useState("carousel");
 
-  const highlightRef = React.useRef(null);
-  const wrapperRef = React.useRef(null);
+  const highlightRef = useRef(null);
+  const wrapperRef = useRef(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setTabBoundingBox(null);
+      setWrapperBoundingBox(null);
+      setHighlightedTab(null);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const repositionHighlight = (e, tab) => {
     setTabBoundingBox(e.target.getBoundingClientRect());
@@ -38,11 +50,9 @@ const Tabs = () => {
     setHighlightedTab(tab);
   };
 
-  const resetHighlight = () => setHighlightedTab(null);
-
   const handleTabClick = (tab) => {
     setSelectedComponent(tab.value);
-    resetHighlight();
+    setHighlightedTab(null);
   };
 
   const highlightStyles = {};
@@ -54,6 +64,9 @@ const Tabs = () => {
     highlightStyles.transform = `translate(${
       tabBoundingBox.left - wrapperBoundingBox.left
     }px)`;
+  } else {
+    // Page is resizing, set opacity to 0
+    highlightStyles.opacity = 0;
   }
 
   return (
@@ -93,13 +106,11 @@ const Tab = styled.a`
   cursor: pointer;
   transition: color 250ms;
   &:active {
-   
   }
-  
 `;
 
 const TabsHighlight = styled.div`
-  background: hsl(0 0% 90.9%); /* Keep the background color constant */
+  background: hsl(0 0% 90.9%);
   position: absolute;
   top: 9px;
   left: 0;
@@ -107,8 +118,6 @@ const TabsHighlight = styled.div`
   height: 32px;
   transition: 0.15s ease;
   transition-property: width, transform, opacity;
-
-
 `;
 
 export default Tabs;

@@ -8,25 +8,14 @@ import "../contentlist.css";
 const items = [
   {
     name: "Photos",
-
-    description: (
-      <>
-       Image gallery to showcase personal photography, built around the{" "}
-        <a href="https://www.lightgalleryjs.com/">lightgallery.js</a> plugin
-      </>
-    ),
+    description: "Image gallery to showcase personal photography, built around the <a href='https://www.lightgalleryjs.com/' target='_blank' rel='noopener noreferrer'>lightgallery.js</a> plugin",
     link: "http://www.photos.tommcl.co.uk/",
     queryLink: "https://www.lightgalleryjs.com/",
     image: pentaxImage,
   },
   {
     name: "Pitch Kick",
-    description: (
-      <>
-        A sandbox Analog style kick drum synth built to test out the{" "}
-        <a href="https://tonejs.github.io/">tone.js</a> framework
-      </>
-    ),
+    description: "A sandbox Analog style kick drum synth built to test out the <a href='https://tonejs.github.io/' target='_blank' rel='noopener noreferrer'>tone.js</a> framework",
     link: "https://tommcl.co.uk/pitchkick",
     queryLink: "https://www.lightgalleryjs.com/",
     image: pitchKick,
@@ -45,16 +34,14 @@ const items = [
   },
 ];
 
-
 const ContentList = () => {
-
   const [lastUpdatedDates, setLastUpdatedDates] = useState({});
 
   useEffect(() => {
     const fetchLastUpdatedDates = async () => {
       const updatedDates = {};
       const errors = [];
-  
+
       for (const item of items) {
         try {
           if (item.queryLink) {
@@ -70,40 +57,42 @@ const ContentList = () => {
           updatedDates[item.name] = "-";
         }
       }
-  
+
       // Handle errors outside the loop
       if (errors.length > 0) {
-        console.error('Errors fetching last updated dates:', errors);
+        console.error("Errors fetching last updated dates:", errors);
       }
-  
+
       setLastUpdatedDates(updatedDates);
     };
-  
+
     fetchLastUpdatedDates();
   }, [items]);
 
   return (
     <table className="table">
-      <tr>
-        <th></th>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Last Updated</th>
-      </tr>
-      {items.map((item) => (
-        <tr key={item.name}>
-         <td>
-          <a href={item.link} target="_blank" rel="noopener noreferrer">
-            <img src={item.image} alt={`${item.name}`} className="tableImage" />
-          </a>
-        </td>
-          <td className={item.name}>{item.name}</td>
-          <td className="tableDescription topRow">
-            {item.description} 
-          </td>
-          <td>{lastUpdatedDates[item.name]}</td>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Last Updated</th>
         </tr>
-      ))}
+      </thead>
+      <tbody>
+        {items.map((item) => (
+          <tr key={item.name}>
+            <td>
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
+                <img src={item.image} alt={`${item.name}`} className="tableImage" />
+              </a>
+            </td>
+            <td className={item.name}>{item.name}</td>
+            <td className="tableDescription topRow" dangerouslySetInnerHTML={{ __html: item.description }} />
+            <td>{lastUpdatedDates[item.name]}</td>
+          </tr>
+        ))}
+      </tbody>
     </table>
   );
 };

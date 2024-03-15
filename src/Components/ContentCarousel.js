@@ -11,9 +11,11 @@ import "../flickity.css"
 const flickityOptions = {
 
   pageDots: true,
-  selectedAttraction: 0.1,
+  selectedAttraction: 0.05,
 friction: 1,
 draggable: true,
+autoPlay: true,
+wrapAround: true
 };
 
 const ContentCarousel = () => {
