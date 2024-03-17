@@ -1,6 +1,5 @@
 import React from "react";
 import Profile from "../Assets/profile.jpeg";
-// import Dog from "../Assets/dog.jpeg";
 import "../index.css";
 import "../about.css";
 

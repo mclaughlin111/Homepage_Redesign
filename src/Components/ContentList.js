@@ -1,38 +1,6 @@
 import React, { useState, useEffect } from "react";
-import pentaxImage from "../Assets/pentaxcamera.jpeg";
-import youtubeImage from "../Assets/youtubelink.jpeg";
-import gameImage from "../Assets/gamelink.png";
-import pitchKick from "../Assets/pitchkick.jpeg";
 import "../contentlist.css";
-
-const items = [
-  {
-    name: "Photos",
-    description: "Image gallery to showcase personal photography, built around the <a href='https://www.lightgalleryjs.com/' target='_blank' rel='noopener noreferrer'>lightgallery.js</a> plugin",
-    link: "http://www.photos.tommcl.co.uk/",
-    queryLink: "https://www.lightgalleryjs.com/",
-    image: pentaxImage,
-  },
-  {
-    name: "Pitch Kick",
-    description: "A sandbox Analog style kick drum synth built to test out the <a href='https://tonejs.github.io/' target='_blank' rel='noopener noreferrer'>tone.js</a> framework",
-    link: "https://tommcl.co.uk/pitchkick",
-    queryLink: "https://www.lightgalleryjs.com/",
-    image: pitchKick,
-  },
-  {
-    name: "Memory Game",
-    description: "Interactive level-based puzzle game to test and develop memory recall.",
-    link: "https://tommcl.co.uk/game/",
-    image: gameImage,
-  },
-  {
-    name: "Youtube",
-    description: "Youtube channel with videos relating to music / audio / sound-engineering",
-    link: "https://www.youtube.com/channel/UCSr397y_jFgZg76tbndxv8A",
-    image: youtubeImage,
-  },
-];
+import ContentData from "../Assets/ContentData.json";
 
 const ContentList = () => {
   const [lastUpdatedDates, setLastUpdatedDates] = useState({});
@@ -42,7 +10,7 @@ const ContentList = () => {
       const updatedDates = {};
       const errors = [];
 
-      for (const item of items) {
+      for (const item of ContentData) {
         try {
           if (item.queryLink) {
             const response = await fetch(item.queryLink);
@@ -67,7 +35,7 @@ const ContentList = () => {
     };
 
     fetchLastUpdatedDates();
-  }, [items]);
+  }, []);
 
   return (
     <table className="table">
@@ -80,11 +48,11 @@ const ContentList = () => {
         </tr>
       </thead>
       <tbody>
-        {items.map((item) => (
+        {ContentData.map((item) => (
           <tr key={item.name}>
             <td>
               <a href={item.link} target="_blank" rel="noopener noreferrer">
-                <img src={item.image} alt={`${item.name}`} className="tableImage" />
+                <img src={process.env.PUBLIC_URL + "/" + item.image} alt={item.name} className="tableImage" />
               </a>
             </td>
             <td className={item.name}>{item.name}</td>
