@@ -7,16 +7,16 @@ import ContentCarousel from "./ContentCarousel";
 const tabsData = [
   {
     title: "Row",
-    value: "row"
+    value: "row",
   },
   {
     title: "Carousel",
-    value: "carousel"
+    value: "carousel",
   },
   {
     title: "Grid",
-    value: "grid"
-  }
+    value: "grid",
+  },
 ];
 
 const Tabs = () => {
@@ -75,6 +75,7 @@ const Tabs = () => {
         <TabsHighlight ref={highlightRef} style={highlightStyles} />
         {tabsData.map((tab) => (
           <Tab
+            className="componentTab"
             key={tab.value}
             onMouseOver={(ev) => repositionHighlight(ev, tab)}
             onClick={() => handleTabClick(tab)}

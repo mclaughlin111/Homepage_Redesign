@@ -20,12 +20,6 @@
     "image": "assets/gamelink.png"
   },
   {
-    "name": "Youtube",
-    "description": "Youtube channel with videos relating to music / audio / sound-engineering",
-    "link": "https://www.youtube.com/channel/UCSr397y_jFgZg76tbndxv8A",
-    "image": "assets/youtubelink.jpeg"
-  },
-  {
     "name": "Div Grid",
     "description": "Playful experiment testing out CSS and Javascript",
     "link": "https://tommcl.co.uk/divgrid/",
