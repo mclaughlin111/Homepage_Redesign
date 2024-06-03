@@ -69,3 +69,10 @@ td:hover {
 .table td:nth-child(n+2):not(:last-child):hover::before {
   border: 1px solid rgb(110, 110, 110);
 }
+
+.tableHeadingLinkIcon {
+  position: relative;
+  scale: 0.9;
+  left: 7px;
+  top: 3px;
+}

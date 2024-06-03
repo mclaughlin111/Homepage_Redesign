@@ -1,8 +1,14 @@
 [
   {
+    "name": "Gratitude Journal",
+    "description": "To-Do list style web application that aims to improve users mental health through compounding habits",
+    "link": "https://gratitudejournal.me/",
+    "image": "assets/gratitudejournal.jpeg"
+  },
+  {
     "name": "Photos",
     "description": "Image gallery to showcase personal photography, built around the lightgallery.js plugin",
-    "link": "http://www.photos.tommcl.co.uk/",
+    "link": "https://tommcl.co.uk/photosfilm",
     "queryLink": "https://www.lightgalleryjs.com/",
     "image": "assets/pentaxcamera.jpeg"
   },

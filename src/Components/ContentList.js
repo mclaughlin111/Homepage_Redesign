@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../contentlist.css";
 import ContentData from "../Assets/ContentData.json";
+import { IoMdLink } from "react-icons/io";
 
 const ContentList = () => {
   const [lastUpdatedDates, setLastUpdatedDates] = useState({});
@@ -41,7 +42,7 @@ const ContentList = () => {
     <table className="table">
       <thead>
         <tr>
-          <th></th>
+          <th className="tableHeadingLinkIcon"><IoMdLink/></th>
           <th>Name</th>
           <th>Description</th>
           <th>Last Updated</th>

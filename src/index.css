@@ -135,7 +135,11 @@ font-size: larger !important;
 body {
   background-color: black;
   color: white;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 450;
+  font-style: normal;
 }
 
 

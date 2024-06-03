@@ -26,6 +26,8 @@ const About = () => {
           Link to{" "}
           <a className="cvLink" href="https://github.com/mclaughlin111">
             Github
+          </a>{" "}<a className="cvLink" href="https://www.linkedin.com/in/thomas-mclaughlin-312299179/">
+             Linkedin
           </a>
         </p>
         {/* <p className="dogLink">

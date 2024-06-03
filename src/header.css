@@ -8,15 +8,15 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: black;
+    /* background-color: black; */
     /* margin-left: 1em;
     margin-right: 1em; */
     position: sticky;
     top: 0;
     z-index: 99; /* Adjust the z-index as needed */
     /* filter blur */
-    backdrop-filter: blur(50px);
-    /* mix-blend-mode: multiply;  */
+    backdrop-filter: blur(35px);
+    /* mix-blend-mode: add;  */
   }
   
   .headerBorder {
@@ -38,6 +38,8 @@
   
   .pageHeaderLight {
     background-color: rgb(255, 255, 255);
+
+    mix-blend-mode: add; 
     display: flex;
     position: sticky;
     flex-direction: row;
