@@ -6,11 +6,23 @@
     "image": "assets/gratitudejournal.jpeg"
   },
   {
+    "name": "Sunset Sail",
+    "description": "4 Track EP 2024",
+    "link": "https://distrokid.com/hyperfollow/thomasmjames/sunset-sail",
+    "image": "assets/sscover.png" 
+  },
+  {
     "name": "Photos",
     "description": "Image gallery to showcase personal photography, built around the lightgallery.js plugin",
     "link": "https://tommcl.co.uk/photosfilm",
     "queryLink": "https://www.lightgalleryjs.com/",
     "image": "assets/pentaxcamera.jpeg"
+  },
+  {
+    "name": "Coursework File Tree",
+    "description": "File tree directory showing coursework completed throughout my undergraduate degree",
+    "link": "https://tommcl.co.uk/courseworktree",
+    "image": "assets/courseworktree.png"
   },
   {
     "name": "Pitch Kick",

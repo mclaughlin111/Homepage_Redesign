@@ -10,6 +10,7 @@
   
   .grid-item {
     text-align: center;
+    
   }
   
   .gridImage {
@@ -18,6 +19,7 @@
     box-sizing: border-box; /* Include border in width and height calculations */
     border: 1px solid transparent; /* Set default border to transparent */
     transition: border 0.2s ease-in-out;
+    border-radius: 5px;
   }
 
   .gridImage:hover {

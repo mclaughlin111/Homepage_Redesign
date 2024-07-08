@@ -8,7 +8,8 @@ const flickityOptions = {
   selectedAttraction: 0.05,
   friction: 1,
   draggable: true,
-  autoPlay: true,
+  // autoPlay: 3500,
+  pauseAutoPlayOnHover: false,
   wrapAround: true
 };
 

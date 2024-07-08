@@ -160,3 +160,56 @@ https://flickity.metafizzy.co
 .dot:active {
   color: #19F !important;
 }
+
+/* FLickity carousel EXTRA CSS */
+.carousel {
+  /* margin-top: 2vh; */
+ /* max-height: 70vh;   */
+  /* overflow: hidden; */
+  height: fit-content;
+
+}
+
+.carousel img {
+  border-radius: 15px;
+  width: 80%;
+}
+
+.carouselItemDescription {
+  font-weight: 200;
+  opacity: 0;
+  margin-top: 2px;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
+}
+
+.carouselItemContainer:hover .carouselItemDescription {
+  opacity: 1;
+}
+
+
+
+.carousel-image {
+  padding: 5px;
+
+}
+
+.carouselItemContainer {
+  text-align: center;
+
+}
+
+.carouselItemDescription {
+  font-weight: 200;
+  opacity: 0;
+  margin-top: 2px;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
+}
+
+.carouselItemContainer:hover .carouselItemDescription {
+  opacity: 1;
+}
+
+
+

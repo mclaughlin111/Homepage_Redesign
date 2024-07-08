@@ -3,18 +3,21 @@ import styled from "styled-components";
 import ContentGrid from "./ContentGrid";
 import ContentList from "./ContentList";
 import ContentCarousel from "./ContentCarousel";
+import { TbCarouselHorizontal } from "react-icons/tb";
+import { BsGridFill } from "react-icons/bs";
+import { PiListBold } from "react-icons/pi";
 
 const tabsData = [
   {
-    title: "Row",
+    title: <PiListBold/>,
     value: "row",
   },
   {
-    title: "Carousel",
+    title: <TbCarouselHorizontal/>,
     value: "carousel",
   },
   {
-    title: "Grid",
+    title: <BsGridFill className="grid"/>,
     value: "grid",
   },
 ];
