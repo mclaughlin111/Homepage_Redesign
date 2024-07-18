@@ -8,9 +8,8 @@ const flickityOptions = {
   selectedAttraction: 0.05,
   friction: 1,
   draggable: true,
-  // autoPlay: 3500,
-  pauseAutoPlayOnHover: false,
-  wrapAround: true
+  autoPlay: 3500,
+  wrapAround: true,
 };
 
 const ContentCarousel = () => {
@@ -20,7 +19,11 @@ const ContentCarousel = () => {
         {ContentData.map((item, index) => (
           <div key={index} className="carouselItemContainer">
             <a href={item.link}>
-              <img src={process.env.PUBLIC_URL + "/" + item.image} alt={item.name} className="carousel-image" />
+              <img
+                src={process.env.PUBLIC_URL + "/" + item.image}
+                alt={item.name}
+                className="carousel-image"
+              />
             </a>
             <p className="carouselItemDescription">{item.name}</p>
           </div>
