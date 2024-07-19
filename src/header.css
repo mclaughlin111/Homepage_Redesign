@@ -1,7 +1,4 @@
-/* Header CSS */
-.headerContainer {
-  position: relative;
-}
+/* pageHeader */
 
 .pageHeader {
   display: flex;
@@ -20,45 +17,17 @@
   transition: all 300ms ease-in-out;
   transition-timing-function: ease-in-out;
   transition-delay: 50ms;
-
-
 }
 
 .pageHeaderScroll {
-
   transform: scale(0.9);
   border-radius: 50px;
   box-shadow: 0px 0px 81px -22px rgba(0, 0, 0, 0.65);
   /* height: 90px; */
 }
 
-.headerBorder {
-  /* margin-left: 1em; */
-  /* margin-right: 1em; */
-  height: 2.5px;
-  border-radius: 15px;
-  background-color: white;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
-  transition: opacity 150ms ease-in-out;
-  /* Adjust the z-index as needed */
-}
-
-.headerBorderScroll {
-  opacity: 0;
-}
-
-.headerBorderLight {
-  background-color: black;
-}
-
 .pageHeaderLight {
-  background-color: rgb(255, 255, 255);
-
-  mix-blend-mode: add;
+  backdrop-filter: blur(15px);
   display: flex;
   position: sticky;
   flex-direction: row;
@@ -66,8 +35,36 @@
   /* margin-left: 1em; */
   /* margin-right: 1em; */
 
-  border-bottom-width: 100%;
 }
+
+.headerBorder {
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  height: 2.5px;
+  border-radius: 15px;
+  background-color: white;
+  z-index: 4;
+
+  transition: opacity 150ms ease-in-out, width 150ms ease-in-out, left 150ms ease-in-out, right 150ms ease-in-out;
+}
+
+.headerBorderScroll {
+  opacity: 0.4;
+  width: 50%;
+  /* Adjust this value as needed to control shrinkage */
+  left: 25%;
+  /* Center the line horizontally */
+  right: 25%;
+  /* Ensure symmetry */
+}
+
+
+.headerBorderLight {
+  background-color: black;
+}
+
+
 
 .headerContainer {
 

@@ -17,25 +17,20 @@ const pageRoutes = createBrowserRouter([
       },
       {
         path: "/projects/",
-        element: (
-          <Tabs />
-        ),
+        element: <Tabs />,
       },
       {
         path: "/about/",
-        element: (
-          <About />
-        ),
-
-      }
-    ]
-  }
-])
+        element: <About />,
+      },
+    ],
+  },
+]);
 const HomePage = () => {
   return (
     <>
       <RouterProvider router={pageRoutes} />
-    <footer className="footer">©2024</footer>
+      <footer className="footer">©2024</footer>
     </>
   );
 };
