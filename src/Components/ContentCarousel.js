@@ -5,10 +5,10 @@ import "../flickity.css";
 
 const flickityOptions = {
   pageDots: true,
-  selectedAttraction: 0.05,
-  friction: 1,
+  selectedAttraction: 0.2,
+  friction: 1.5,
   draggable: true,
-  autoPlay: 3500,
+  autoPlay: 4500,
   wrapAround: true,
 };
 

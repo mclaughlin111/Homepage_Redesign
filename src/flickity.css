@@ -10,19 +10,21 @@ https://flickity.metafizzy.co
   position: relative;
 }
 
-.flickity-enabled:focus { outline: none; }
+.flickity-enabled:focus {
+  outline: none;
+}
 
 .flickity-viewport {
   overflow: hidden;
   position: relative;
-  /* height: 70vh !important;  */
+  height: fit-content;
   touch-action: pan-y;
 }
 
 .flickity-slider {
   position: absolute;
   width: 100%;
-  height: 100%; 
+  height: 100%;
   left: 0;
 }
 
@@ -99,14 +101,21 @@ https://flickity.metafizzy.co
   top: 50%;
   width: 44px;
   height: 44px;
-  z-index: 1; /* above viewport */
+  z-index: 1;
+  /* above viewport */
   border-radius: 50%;
   /* vertically center */
   transform: translateY(-50%);
 }
 
-.flickity-prev-next-button.previous { left: 10px; }
-.flickity-prev-next-button.next { right: 10px; }
+.flickity-prev-next-button.previous {
+  left: 10px;
+}
+
+.flickity-prev-next-button.next {
+  right: 10px;
+}
+
 /* right to left */
 .flickity-rtl .flickity-prev-next-button.previous {
   left: auto;
@@ -131,7 +140,6 @@ https://flickity.metafizzy.co
 .flickity-page-dots {
   position: absolute;
   width: 100%;
-  height: 100%;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -157,6 +165,7 @@ https://flickity.metafizzy.co
 .flickity-page-dots .dot.is-selected {
   opacity: 1;
 }
+
 .dot:active {
   color: #19F !important;
 }
@@ -164,7 +173,7 @@ https://flickity.metafizzy.co
 /* FLickity carousel EXTRA CSS */
 .carousel {
   /* margin-top: 2vh; */
- /* max-height: 70vh;   */
+  /* max-height: 70vh;   */
   /* overflow: hidden; */
   height: fit-content;
 
@@ -172,7 +181,7 @@ https://flickity.metafizzy.co
 
 .carousel img {
   border-radius: 15px;
-  width: 80%;
+  width: fit-content;
 }
 
 .carouselItemDescription {
@@ -211,5 +220,11 @@ https://flickity.metafizzy.co
   opacity: 1;
 }
 
+@media screen and (min-width: 1px) and (max-width: 600px) {
+  .carousel img {
+    width: 70vw;
+  }
 
 
+
+}

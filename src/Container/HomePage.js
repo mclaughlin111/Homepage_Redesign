@@ -1,10 +1,10 @@
 import About from "../Components/About";
 import Projects from "../Components/Projects";
 import Header from "../Components/Header";
-
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Tabs from "../Components/Tabs";
+import "../footer.css";
 
 const pageRoutes = createBrowserRouter([
   {
@@ -29,7 +29,9 @@ const pageRoutes = createBrowserRouter([
 const HomePage = () => {
   return (
     <>
-      <RouterProvider router={pageRoutes} />
+      <main style={{ flex: 1 }}>
+        <RouterProvider router={pageRoutes} />
+      </main>
       <footer className="footer">©2024</footer>
     </>
   );

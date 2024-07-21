@@ -18,10 +18,10 @@ nav ul {
 
 nav li {
   margin: 5px;
-  padding: 5px; 
+  padding: 5px;
   cursor: pointer;
   border-radius: 25%;
- 
+
 }
 
 /* nav li:hover {
@@ -42,7 +42,7 @@ nav li {
   /* border-radius: 25%; */
 }
 
-.componentTab > svg {
+.componentTab>svg {
   scale: 1.5;
   pointer-events: none;
 

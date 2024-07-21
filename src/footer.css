@@ -1,0 +1,23 @@
+/* footer.css */
+.footer {
+    display: flex;
+    flex-direction: row;
+    text-decoration: underline;
+    opacity: 100%;
+    height: 100%;
+    font-size: 0.8em;
+    z-index: 99;
+    justify-content: left;
+    bottom: 0;
+    width: 100%;
+    align-items: flex-end
+}
+
+/* MEDIA QUERIES */
+/* Mobile / phone  */
+@media screen and (max-width: 600px) {
+    .footer {
+        justify-content: center;
+        font-size: 0.9em;
+    }
+}
