@@ -1,0 +1,8 @@
+.errorContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.errorContainer > h2 {
+ 
+}

@@ -1,18 +1,17 @@
 html,
-body,
 #root {
-  height: 100%;
+  /* min-height: 100vh; */
   margin: 0;
 }
 
-#root {
-  display: flex;
-  flex-direction: column;
+body {
+  /* min-height: 100vh; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  margin: 0;
 }
 
-main {
-  flex: 1;
-}
+
 
 /* MAX KOHLER ROOT CSS styles */
 :root {
@@ -49,18 +48,6 @@ a {
   color: var(--blue)
 }
 
-.footer {
-  display: flex;
-  flex-direction: row;
-
-  text-decoration: underline;
-  text-align: left;
-  opacity: 100%;
-  height: 100%;
-  font-size: 0.8em;
-  z-index: 99;
-
-}
 
 .about {
   margin-left: 1em;

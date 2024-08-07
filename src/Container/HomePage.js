@@ -5,6 +5,7 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Tabs from "../Components/Tabs";
 import "../footer.css";
+import Error from "../Components/Error";
 
 const pageRoutes = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const pageRoutes = createBrowserRouter([
       {
         path: "/about/",
         element: <About />,
+      },
+      {
+        path: "/*",
+        element: <Error />,
       },
     ],
   },

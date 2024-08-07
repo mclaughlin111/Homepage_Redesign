@@ -4,33 +4,36 @@
   position: sticky;
 }
 
-
+.headerContainer {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
 
 .pageHeader {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* background-color: black; */
-  /* margin-left: 1em;
-    margin-right: 1em; */
+  margin-right: 1em;
   position: sticky;
   top: 0;
   z-index: 99;
-  /* Adjust the z-index as needed */
-  /* filter blur */
   backdrop-filter: blur(15px);
-  /* mix-blend-mode: add;  */
-  transition: all 300ms ease-in-out;
-  transition-timing-function: ease-in-out;
-  /* transition-delay: 50ms; */
+  transition:
+    border-radius 300ms ease-in-out,
+    transform 300ms ease-in-out,
+    box-shadow 300ms ease-in-out;
 }
 
 .pageHeaderScroll {
   transform: scale(0.8);
   border-radius: 50px;
-  top: -5px;
   box-shadow: 0px 0px 81px -22px rgba(0, 0, 0, 0.65);
-  /* height: 90px; */
+  transition:
+    justify-content 300ms ease-in-out,
+    border-radius 300ms ease-in-out,
+    transform 300ms ease-in-out,
+    box-shadow 300ms ease-in-out;
 }
 
 .pageHeaderLight {
@@ -45,22 +48,23 @@
 }
 
 .headerBorder {
+  margin-left: 1em;
+  margin-right: 1em;
   position: sticky;
-  display: flex;
-  justify-content: center;
+  z-index: 100;
   height: 2.5px;
   border-radius: 15px;
   background-color: white;
-  z-index: 4;
   transition: all 150ms ease-in-out;
-  transition-delay: 100ms;
 }
 
 .headerBorderScroll {
+  position: sticky;
   justify-items: center;
   align-content: center;
   opacity: 0.4;
   width: 50%;
+  transform: translateY(-12px);
   /* Adjust this value as needed to control shrinkage */
   left: 25%;
   /* Center the line horizontally */
@@ -71,14 +75,6 @@
 
 .headerBorderLight {
   background-color: black;
-}
-
-
-
-.headerContainer {
-
-  z-index: 1000;
-  /* Adjust the z-index as needed */
 }
 
 
@@ -114,7 +110,7 @@
 
 .titleScroll {
   font-family: Gill sans;
-  padding: 0.4em;
+  /* padding: 0.4em; */
   border: 1.5em;
 }
 
