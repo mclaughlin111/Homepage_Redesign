@@ -179,10 +179,6 @@ https://flickity.metafizzy.co
 
 }
 
-.carousel img {
-  border-radius: 15px;
-  width: fit-content;
-}
 
 .carouselItemDescription {
   font-weight: 200;
@@ -199,7 +195,10 @@ https://flickity.metafizzy.co
 
 
 .carousel-image {
+  border-radius: 15px;
+  /* width: fit-content; */
   padding: 5px;
+  width: 500px;
 
 }
 
@@ -221,8 +220,8 @@ https://flickity.metafizzy.co
 }
 
 @media screen and (min-width: 1px) and (max-width: 600px) {
-  .carousel img {
-    width: 70vw;
+  .carousel-image {
+    width: 400px;
   }
 
 

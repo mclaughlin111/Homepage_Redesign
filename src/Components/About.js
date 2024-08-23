@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div className="about">
       <div>
-        <p>Thomas McLaughlin: Software Engineer</p>
+        <p>Thomas McLaughlin Software Engineer</p>
         <p className="subline">Currently with Lloyds Banking Group</p>
 
         <hr className="aboutPageBreak" />
@@ -27,7 +27,10 @@ const About = () => {
             <a className="cvLink" href="https://github.com/mclaughlin111">
               Github
             </a>{" "}
-            <a className="cvLink" href="https://www.linkedin.com/in/thomas-mclaughlin-312299179/">
+            <a
+              className="cvLink"
+              href="https://www.linkedin.com/in/thomas-mclaughlin-312299179/"
+            >
               LinkedIn
             </a>
           </p>

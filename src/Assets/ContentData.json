@@ -6,10 +6,16 @@
     "image": "assets/gratitudejournal.jpeg"
   },
   {
+    "name": "Blog",
+    "description": "Thoughts, stories, observation",
+    "link": "https://tommcl.co.uk/blog",
+    "image": "assets/blog.jpeg"
+  },
+  {
     "name": "Sunset Sail",
     "description": "4 Track EP 2024",
     "link": "https://distrokid.com/hyperfollow/thomasmjames/sunset-sail",
-    "image": "assets/sscover.png" 
+    "image": "assets/sscover.png"
   },
   {
     "name": "Photos",

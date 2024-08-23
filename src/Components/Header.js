@@ -11,7 +11,7 @@ const Header = () => {
       const headerBorder = document.querySelector(".headerBorder");
       const header = document.querySelector(".pageHeader");
       const title = document.querySelector(".title");
-      if (window.scrollY > 5) {
+      if (window.scrollY > 2) {
         header.classList.add("pageHeaderScroll");
         headerBorder.classList.add("headerBorderScroll");
         title.classList.add("titleScroll");
