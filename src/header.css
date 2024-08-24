@@ -2,13 +2,13 @@
 
 /* Shadow Constants */
 :root {
-  --shadow-color: 0deg 0% 0%;
+  --shadow-color: 0deg 0% 10%;
   --shadow-elevation-low:
     0px 1px 1.2px hsl(var(--shadow-color) / 0.37),
     0.1px 4.1px 5.1px -1.7px hsl(var(--shadow-color) / 0.55);
   --shadow-elevation-medium:
-    0px 1px 1.2px hsl(var(--shadow-color) / 213.77),
-    0.3px 20.6px 25.6px 9.3px hsl(var(--shadow-color) / 0.4);
+    0px 0px 20.2px hsl(var(--shadow-color) / 213.77),
+    0.3px 20.6px 25.6px 9.3px hsl(var(--shadow-color) / 0.5);
   --shadow-elevation-high:
     0px 1px 1.2px hsl(var(--shadow-color) / 0.65),
     0.4px 27.1px 33.7px -0.8px hsl(var(--shadow-color) / 0.85),
@@ -32,7 +32,7 @@
   margin-right: 1em;
   position: sticky;
   top: 0;
-  z-index: 99;
+  z-index: 2;
   backdrop-filter: blur(65px);
   transition:
     border-radius 300ms ease-in-out,
@@ -45,6 +45,7 @@
   border-radius: 50px;
   /* box-shadow: 0px 0px 81px -22px rgba(0, 0, 0, 0.65); */
   box-shadow: var(--shadow-elevation-medium);
+  z-index: 2;
   transition:
     justify-content 300ms ease-in-out,
     border-radius 300ms ease-in-out,
@@ -66,14 +67,14 @@
 .headerBorder,
 .headerBorderScroll {
   transition: all 250ms ease-in-out;
-  transition-delay: 100ms;
 }
 
+/* BORDER */
 .headerBorder {
   margin-left: 1em;
   margin-right: 1em;
   position: sticky;
-  z-index: 100;
+  z-index: 1;
   height: 2.5px;
   border-radius: 15px;
   background-color: white;
@@ -81,12 +82,15 @@
 }
 
 .headerBorderScroll {
+  margin-left: 15em;
+  margin-right: 15em;
   position: sticky;
   justify-items: center;
   align-content: center;
-  opacity: 0.0;
-  width: 50%;
-  /* transform: translateY(-14px); */
+  height: 3.5px;
+  opacity: 0.5;
+  /* width: 50%; */
+  transform: translateY(-8.5px);
   /* Adjust this value as needed to control shrinkage */
   /* left: 25%; */
   /* Center the line horizontally */
@@ -125,20 +129,18 @@
 
 .title {
   font-family: Gill sans;
-  padding: 0.9em;
-  border: 1.5em;
+  /* padding: 0.9em; */
+  /* border: 1.5em; */
+  margin-left: 1em;
   transition: padding 150ms ease-in-out;
 }
 
 .titleScroll {
   font-family: Gill sans;
-  /* padding: 0.4em; */
   border: 1.5em;
 }
 
-
 .title:hover {
-
   background-color: rgba(255, 255, 255, 0.102);
 }
 
@@ -157,7 +159,6 @@
   font-style: normal;
   font-weight: normal;
   transition: color 0.28s ease-in-out;
-  /* Updated to only target color property */
 }
 
 /* Updated #line styles */
@@ -172,6 +173,12 @@
 
 .switch {
   color: rgb(93, 92, 92);
+
+}
+
+.switch:focus,
+.switcher {
+  color: white;
 }
 
 .switchlight {
@@ -201,6 +208,8 @@
   .title {
     font-size: 2rem;
     padding: 0.2em;
+    margin-left: 0;
+    margin-bottom: 2px;
   }
 
   #switcher {
