@@ -1,0 +1,18 @@
+#gradient-canvas {
+    /* filter: blur(1px); */
+    position: fixed;
+    opacity: 1;
+    z-index: -1;
+    width: 100vw;
+    /* Adjust width to account for padding */
+    height: 60vh;
+    left: 0;
+    bottom: 20vh;
+    /* Adjust height to account for padding */
+    --gradient-color-1: #000000;
+    --gradient-color-2: #292929;
+    --gradient-color-3: #000000;
+    --gradient-color-4: #adadad;
+    /* filter: blur(10); */
+    border-radius: 15px;
+}

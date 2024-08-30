@@ -6,6 +6,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Tabs from "../Components/Tabs";
 import "../footer.css";
 import Error from "../Components/Error";
+import { useEffect } from "react";
+import { Gradient } from "../Components/Gradient.js";
+import "../gradient.css";
 
 const pageRoutes = createBrowserRouter([
   {
@@ -31,10 +34,20 @@ const pageRoutes = createBrowserRouter([
     ],
   },
 ]);
+
 const HomePage = () => {
+  //Initialize the Gradient
+
+  useEffect(() => {
+    const gradient = new Gradient();
+    gradient.initGradient("#gradient-canvas");
+    console.log(gradient);
+  }, []);
+
   return (
     <>
       <main style={{ flex: 1 }}>
+        {/* <canvas id="gradient-canvas" data-transition-in /> */}
         <RouterProvider router={pageRoutes} />
       </main>
       <footer className="footer">©2024</footer>

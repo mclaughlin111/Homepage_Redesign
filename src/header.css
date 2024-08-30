@@ -30,27 +30,52 @@
   flex-direction: row;
   justify-content: space-between;
   margin-right: 1em;
+  margin-left: 1em;
+  padding: 0px 0em;
+  /* Adjust padding to control top and bottom space */
+
   position: sticky;
   top: 0;
   z-index: 2;
-  backdrop-filter: blur(65px);
+  backdrop-filter: blur(20px);
+
+  border-radius: 0px;
   transition:
+    padding 300ms ease-in-out,
+    margin-left 500ms ease-in-out,
+    margin-top 300ms ease-in-out,
+    margin-right 500ms ease-in-out,
     border-radius 300ms ease-in-out,
     transform 300ms ease-in-out,
     box-shadow 300ms ease-in-out;
+
 }
 
 .pageHeaderScroll {
-  transform: scale(0.8);
+  margin-right: 10em;
+  margin-left: 10em;
+
+  padding: 0px 2em;
+  /* Shrink padding for top and bottom */
+  top: 50px;
+  transform: scale(0.9);
+  /* border-style: Outset; */
   border-radius: 50px;
   /* box-shadow: 0px 0px 81px -22px rgba(0, 0, 0, 0.65); */
   box-shadow: var(--shadow-elevation-medium);
   z-index: 2;
   transition:
+    padding 300ms ease-in-out,
+
+    margin-left 500ms ease-in-out,
+    margin-right 500ms ease-in-out,
+    margin-top 500ms ease-in-out,
+
     justify-content 300ms ease-in-out,
     border-radius 300ms ease-in-out,
     transform 300ms ease-in-out,
-    box-shadow 300ms ease-in-out;
+    box-shadow 300ms ease-in-out,
+
 }
 
 .pageHeaderLight {
@@ -66,11 +91,12 @@
 
 .headerBorder,
 .headerBorderScroll {
-  transition: all 250ms ease-in-out;
+  /* transition: all 250ms ease-in-out; */
 }
 
 /* BORDER */
 .headerBorder {
+  /* opacity: 0 !important; */
   margin-left: 1em;
   margin-right: 1em;
   position: sticky;
@@ -128,10 +154,11 @@
 }
 
 .title {
+  margin-left: 0em;
   font-family: Gill sans;
   /* padding: 0.9em; */
   /* border: 1.5em; */
-  margin-left: 1em;
+
   transition: padding 150ms ease-in-out;
 }
 
@@ -156,9 +183,11 @@
 .switch,
 .switchlight {
   font-family: Gill sans;
+  text-decoration: none;
   font-style: normal;
   font-weight: normal;
   transition: color 0.28s ease-in-out;
+
 }
 
 /* Updated #line styles */
@@ -179,6 +208,10 @@
 .switch:focus,
 .switcher {
   color: white;
+}
+
+.switchlight:focus {
+  color: black;
 }
 
 .switchlight {

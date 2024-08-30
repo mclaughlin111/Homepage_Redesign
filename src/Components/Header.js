@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import LightDarkToggle from "./LightDarkToggle";
 import { Link, Outlet } from "react-router-dom";
 import MomentumScroll from "./MomentumScroll";
+import { TbMail } from "react-icons/tb";
 import "../header.css";
 
 const Header = () => {
@@ -36,11 +37,10 @@ const Header = () => {
           </div>
 
           <div id="switcher">
-            <a className="switch" id="projects" href="/">
-              <Link className="switch" id="projects" to="/projects">
-                Projects
-              </Link>
-            </a>
+            <Link className="switch" id="projects" to="/projects">
+              Projects
+            </Link>
+
             <div className="divLine">|</div>
 
             <Link className="switch" id="projects" to="/about">
@@ -48,8 +48,8 @@ const Header = () => {
             </Link>
 
             <div className="divLine">|</div>
-            <a className="switch" id="contact" href="mailto:mail@tommcl.co.uk">
-              Contact
+            <a className="switch" id="toggle" href="mailto:mail@tommcl.co.uk">
+              <TbMail />
             </a>
             <div className="divLine">|</div>
             <span id="toggle" title="Click To Switch Mode">
