@@ -4,7 +4,10 @@ import LightDarkToggle from "./LightDarkToggle";
 import { Link, Outlet } from "react-router-dom";
 import MomentumScroll from "./MomentumScroll";
 import { TbMail } from "react-icons/tb";
+import { motion } from "framer-motion";
+
 import "../header.css";
+import { HeaderSelect } from "./HeaderSelect";
 
 const Header = () => {
   useEffect(() => {
@@ -30,10 +33,15 @@ const Header = () => {
 
   return (
     <>
-      <div className="headerContainer">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, ease: "easeInOut" }}
+        className="headerContainer"
+      >
         <header class="pageHeader">
-          <div>
-            <p className="title">Thomas McLaughlin Online</p>
+          <div className="title">
+            <p>Tom McLaughlin </p>
           </div>
 
           <div id="switcher">
@@ -58,7 +66,7 @@ const Header = () => {
           </div>
         </header>
         <div className="headerBorder"></div>
-      </div>
+      </motion.div>
       <Outlet />
     </>
   );

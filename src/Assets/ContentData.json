@@ -5,17 +5,18 @@
     "link": "https://gratitudejournal.me/",
     "image": "assets/gratitudejournal.jpeg"
   },
-  {
-    "name": "Blog",
-    "description": "Thoughts, stories, observation",
-    "link": "https://tommcl.co.uk/blog",
-    "image": "assets/blog.jpeg"
-  },
+
   {
     "name": "Sunset Sail",
     "description": "4 Track EP 2024",
     "link": "https://distrokid.com/hyperfollow/thomasmjames/sunset-sail",
     "image": "assets/sscover.png"
+  },
+  {
+    "name": "Kensal Town",
+    "description": "EP 2024",
+    "link": "https://distrokid.com/hyperfollow/thomasmjames/kensal-town-2",
+    "image": "assets/kensalcover.png"
   },
   {
     "name": "Photos",
@@ -37,12 +38,7 @@
     "queryLink": "https://www.lightgalleryjs.com/",
     "image": "assets/pitchkick.jpeg"
   },
-  {
-    "name": "Memory Game",
-    "description": "Interactive level-based puzzle game to test and develop memory recall.",
-    "link": "https://tommcl.co.uk/game/",
-    "image": "assets/gamelink.png"
-  },
+
   {
     "name": "Div Grid",
     "description": "Playful experiment testing out CSS and Javascript",

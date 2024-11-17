@@ -5,14 +5,20 @@
     z-index: -1;
     width: 100vw;
     /* Adjust width to account for padding */
-    height: 60vh;
-    left: 0;
-    bottom: 20vh;
-    /* Adjust height to account for padding */
+    height: 100vh;
+    scale: 0.98;
+
+
+
     --gradient-color-1: #000000;
     --gradient-color-2: #292929;
     --gradient-color-3: #000000;
-    --gradient-color-4: #adadad;
+    --gradient-color-4: #8c8c8c;
     /* filter: blur(10); */
     border-radius: 15px;
+
+    background: linear-gradient(135deg, var(--gradient-color-1), var(--gradient-color-2), var(--gradient-color-3), var(--gradient-color-4));
+
+    /* Add a radial gradient mask */
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 100%);
 }

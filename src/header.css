@@ -13,6 +13,8 @@
     0px 1px 1.2px hsl(var(--shadow-color) / 0.65),
     0.4px 27.1px 33.7px -0.8px hsl(var(--shadow-color) / 0.85),
     1.7px 106px 132px -1.7px hsl(var(--shadow-color) / 1);
+  --animation-header: 250ms ease-in-out;
+  --animation-border: 200ms ease-in-out;
 }
 
 .scrollContainer {
@@ -28,57 +30,51 @@
 .pageHeader {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   margin-right: 1em;
   margin-left: 1em;
   padding: 0px 0em;
-  /* Adjust padding to control top and bottom space */
-
   position: sticky;
   top: 0;
   z-index: 2;
   backdrop-filter: blur(20px);
-
   border-radius: 0px;
   transition:
-    padding 300ms ease-in-out,
-    margin-left 500ms ease-in-out,
-    margin-top 300ms ease-in-out,
-    margin-right 500ms ease-in-out,
-    border-radius 300ms ease-in-out,
-    transform 300ms ease-in-out,
-    box-shadow 300ms ease-in-out;
-
+    padding var(--animation-header),
+    margin-left var(--animation-header),
+    margin-top var(--animation-header),
+    margin-right var(--animation-header),
+    border-radius var(--animation-header),
+    transform var(--animation-header),
+    box-shadow var(--animation-header),
+    border 1500ms ease-in-out;
 }
 
 .pageHeaderScroll {
-  margin-right: 10em;
-  margin-left: 10em;
-
+  height: 4em;
+  margin-right: 18em;
+  margin-left: 18em;
   padding: 0px 2em;
-  /* Shrink padding for top and bottom */
+  border: solid white 1.5px;
   top: 50px;
   transform: scale(0.9);
-  /* border-style: Outset; */
   border-radius: 50px;
-  /* box-shadow: 0px 0px 81px -22px rgba(0, 0, 0, 0.65); */
-  box-shadow: var(--shadow-elevation-medium);
+  box-shadow: var(--shadow-elevation-low);
   z-index: 2;
   transition:
-    padding 300ms ease-in-out,
-
-    margin-left 500ms ease-in-out,
-    margin-right 500ms ease-in-out,
-    margin-top 500ms ease-in-out,
-
-    justify-content 300ms ease-in-out,
-    border-radius 300ms ease-in-out,
-    transform 300ms ease-in-out,
-    box-shadow 300ms ease-in-out,
-
+    padding var(--animation-header),
+    margin-left var(--animation-header),
+    margin-right var(--animation-header),
+    margin-top var(--animation-header),
+    justify-content var(--animation-header),
+    border-radius var(--animation-header),
+    transform var(--animation-header),
+    box-shadow var(--animation-header),
+    border 1500ms ease-in-out;
 }
 
-.pageHeaderLight {
+.headerHeaderLight {
   backdrop-filter: blur(15px);
   display: flex;
   position: sticky;
@@ -92,6 +88,9 @@
 .headerBorder,
 .headerBorderScroll {
   /* transition: all 250ms ease-in-out; */
+  transition:
+    margin-left var(--animation-border),
+    margin-right var(--animation-border),
 }
 
 /* BORDER */
@@ -108,8 +107,8 @@
 }
 
 .headerBorderScroll {
-  margin-left: 15em;
-  margin-right: 15em;
+  margin-left: 29em;
+  margin-right: 29em;
   position: sticky;
   justify-items: center;
   align-content: center;
@@ -155,9 +154,13 @@
 
 .title {
   margin-left: 0em;
+  mix-blend-mode: multiply;
   font-family: Gill sans;
+  display: flex;
+  align-items: center;
   /* padding: 0.9em; */
   /* border: 1.5em; */
+
 
   transition: padding 150ms ease-in-out;
 }
@@ -168,7 +171,7 @@
 }
 
 .title:hover {
-  background-color: rgba(255, 255, 255, 0.102);
+  /* background-color: rgba(255, 255, 255, 0.102); */
 }
 
 #switcher {
@@ -238,28 +241,70 @@
 
 /* lowest media query MOBILE */
 @media screen and (min-width: 1px) and (max-width: 600px) {
+
+  .title:hover {}
+
   .title {
-    font-size: 2rem;
-    padding: 0.2em;
+    font-size: 1.7rem;
     margin-left: 0;
-    margin-bottom: 2px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    text-align: center;
+    text-wrap: nowrap;
+    margin: 0px;
+
   }
 
+  .pageHeaderScroll .title {
+    font-size: 1.3rem;
+  }
+
+
   #switcher {
-    padding-bottom: 2em;
+    padding-bottom: 1em;
 
   }
 
   .switch,
   .divLine {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   .pageHeader {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
+
+  .headerBorder {
+    height: 2px;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+  .about {
+    margin-top: 0;
+  }
+
+  .pageHeaderScroll #switcher {
+    display: none;
+  }
+
+  /* MOBILE MEDIA .pageHeaderScroll */
+  .pageHeaderScroll {
+    height: 2em;
+    margin-right: 4.5em;
+    margin-left: 4.5em;
+    padding: 0px 2em;
+    transform: scale(0.9);
+    border-radius: 50px;
+    box-shadow: var(--shadow-elevation-medium);
+    z-index: 2;
+    transition: padding 300ms ease-in-out, margin-left 500ms ease-in-out, margin-right 500ms ease-in-out, margin-top 500ms ease-in-out, justify-content 300ms ease-in-out, border-radius 300ms ease-in-out, transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
+  }
+
+
 
 
 }

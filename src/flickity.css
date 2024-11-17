@@ -2,6 +2,7 @@
 https://flickity.metafizzy.co
 ----------------------------- */
 
+
 .flickity-button {
   z-index: -1;
 }
@@ -197,13 +198,13 @@ https://flickity.metafizzy.co
 .carousel-image {
   border-radius: 15px;
   /* width: fit-content; */
-  padding: 5px;
   width: 500px;
 
 }
 
 .carouselItemContainer {
   text-align: center;
+  padding: 5px;
 
 }
 
@@ -224,6 +225,9 @@ https://flickity.metafizzy.co
     width: 400px;
   }
 
+  .carouselContainer {
+    margin-top: 5vh;
+  }
 
 
 }

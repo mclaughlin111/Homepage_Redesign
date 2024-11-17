@@ -1,8 +1,12 @@
 .errorContainer {
+    scale: 1.5;
+    margin-top: 25vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.errorContainer > h2 {
- 
+h3 {
+    margin-bottom: 0px;
 }

@@ -6,18 +6,20 @@ import ContentCarousel from "./ContentCarousel";
 import { TbCarouselHorizontal } from "react-icons/tb";
 import { BsGridFill } from "react-icons/bs";
 import { PiListBold } from "react-icons/pi";
+import useSound from "use-sound";
+import clickFX from "../Assets/click.wav";
 
 const tabsData = [
   {
-    title: <PiListBold/>,
+    title: <PiListBold />,
     value: "row",
   },
   {
-    title: <TbCarouselHorizontal/>,
+    title: <TbCarouselHorizontal />,
     value: "carousel",
   },
   {
-    title: <BsGridFill className="grid"/>,
+    title: <BsGridFill className="grid" />,
     value: "grid",
   },
 ];
@@ -28,6 +30,7 @@ const Tabs = () => {
   const [highlightedTab, setHighlightedTab] = useState(null);
   const [isHoveredFromNull, setIsHoveredFromNull] = useState(true);
   const [selectedComponent, setSelectedComponent] = useState("carousel");
+  const [playFX] = useSound(clickFX);
 
   const highlightRef = useRef(null);
   const wrapperRef = useRef(null);
@@ -56,6 +59,7 @@ const Tabs = () => {
   const handleTabClick = (tab) => {
     setSelectedComponent(tab.value);
     setHighlightedTab(null);
+    playFX();
   };
 
   const highlightStyles = {};
@@ -102,13 +106,13 @@ const TabsNav = styled.div`
 `;
 
 const Tab = styled.a`
-  padding: 16px 12px;
-  font-size: ${14 / 16}rem;
+  padding: 16px 10px;
+  font-size: 1rem;
   color: hsl(0 0% 43.5%);
   display: inline-block;
   position: relative;
   cursor: pointer;
-  transition: color 250ms;
+  transition: color 3500ms ease-in-out;
   &:active {
   }
 `;
@@ -116,11 +120,12 @@ const Tab = styled.a`
 const TabsHighlight = styled.div`
   background: hsl(0 0% 90.9%);
   position: absolute;
-  top: 9px;
+  top: 11px;
   left: 0;
   border-radius: 4px;
-  height: 32px;
-  transition: 0.15s ease;
+  height: 29px;
+  transition: 175ms ease-in-out;
+
   transition-property: width, transform, opacity;
 `;
 

@@ -1,6 +1,7 @@
 import React from "react";
 import Flickity from "react-flickity-component";
 import ContentData from "../Assets/ContentData.json";
+import Tilt from "react-parallax-tilt";
 import "../flickity.css";
 
 const flickityOptions = {
@@ -8,27 +9,38 @@ const flickityOptions = {
   selectedAttraction: 0.2,
   friction: 1.5,
   draggable: true,
-  autoPlay: 4500,
+  autoPlay: true,
   wrapAround: true,
 };
 
 const ContentCarousel = () => {
   return (
-    <div className="carousel">
-      <Flickity options={flickityOptions}>
-        {ContentData.map((item, index) => (
-          <div key={index} className="carouselItemContainer">
-            <a href={item.link}>
-              <img
-                src={process.env.PUBLIC_URL + "/" + item.image}
-                alt={item.name}
-                className="carousel-image"
-              />
-            </a>
-            <p className="carouselItemDescription">{item.name}</p>
-          </div>
-        ))}
-      </Flickity>
+    <div className="carouselContainer">
+      <div className="carousel">
+        <Flickity options={flickityOptions}>
+          {ContentData.map((item, index) => (
+            <div key={index} className="carouselItemContainer">
+              <Tilt
+                tiltEnable
+                tiltReverse={false}
+                scale={0.97}
+                tiltMaxAngleX={25}
+                transitionSpeed={2000}
+                gyroscope
+              >
+                <a href={item.link}>
+                  <img
+                    src={process.env.PUBLIC_URL + "/" + item.image}
+                    alt={item.name}
+                    className="carousel-image"
+                  />
+                </a>
+                <p className="carouselItemDescription">{item.name}</p>
+              </Tilt>
+            </div>
+          ))}
+        </Flickity>
+      </div>
     </div>
   );
 };

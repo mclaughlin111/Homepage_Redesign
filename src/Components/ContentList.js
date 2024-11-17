@@ -42,7 +42,9 @@ const ContentList = () => {
     <table className="table">
       <thead>
         <tr>
-          <th className="tableHeadingLinkIcon"><IoMdLink/></th>
+          <th className="tableHeadingLinkIcon">
+            <IoMdLink />
+          </th>
           <th>Name</th>
           <th>Description</th>
           <th>Last Updated</th>
@@ -53,11 +55,18 @@ const ContentList = () => {
           <tr key={item.name}>
             <td>
               <a href={item.link} target="_blank" rel="noopener noreferrer">
-                <img src={process.env.PUBLIC_URL + "/" + item.image} alt={item.name} className="tableImage" />
+                <img
+                  src={process.env.PUBLIC_URL + "/" + item.image}
+                  alt={item.name}
+                  className="tableImage"
+                />
               </a>
             </td>
             <td className={item.name}>{item.name}</td>
-            <td className="tableDescription topRow" dangerouslySetInnerHTML={{ __html: item.description }} />
+            <td
+              className="tableDescription topRow"
+              dangerouslySetInnerHTML={{ __html: item.description }}
+            />
             <td>{lastUpdatedDates[item.name]}</td>
           </tr>
         ))}

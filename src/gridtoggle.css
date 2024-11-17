@@ -1,0 +1,23 @@
+button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 5px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    transform: translateY(1.5px);
+}
+
+.gridToggleContainer {
+    scale: 1;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    right: 2em;
+    bottom: 2em;
+    margin: .5em;
+    padding: 5px;
+    border-radius: 25px;
+    box-shadow: var(--shadow-elevation-low);
+
+}

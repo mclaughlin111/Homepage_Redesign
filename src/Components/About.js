@@ -7,12 +7,18 @@ const About = () => {
   return (
     <div className="about">
       <div>
-        <p>Thomas McLaughlin Software Engineer</p>
-        <p className="subline">Currently with Lloyds Banking Group</p>
+        <h2>Thomas McLaughlin</h2>
+        <p>Software Engineer for Lloyds Banking Group</p>
+        <p>Based in Bristol, UK</p>
 
         <hr className="aboutPageBreak" />
 
         <div className="aboutList">
+          <p>
+            <strong>Likes doing: </strong> web development, music, photography,
+            design, running, cycling, cooking
+          </p>
+
           <p>
             Download{" "}
             <a
@@ -20,18 +26,31 @@ const About = () => {
               href="https://tommcl.co.uk/home/Thomas_McLaughlin_CV.pdf"
             >
               CV
-            </a>{" "}
+            </a>
           </p>
+
           <p>
-            · Link to{" "}
+            Links:{" "}
             <a className="cvLink" href="https://github.com/mclaughlin111">
-              Github
+              Github{""}
             </a>{" "}
+            |{" "}
             <a
               className="cvLink"
               href="https://www.linkedin.com/in/thomas-mclaughlin-312299179/"
             >
+              {" "}
               LinkedIn
+            </a>{" "}
+            |{" "}
+            <a className="cvLink" href="https://www.instagram.com">
+              {" "}
+              Instagram
+            </a>{" "}
+            |{" "}
+            <a className="cvLink" href="https://www.youtube.com">
+              {" "}
+              Youtube{" "}
             </a>
           </p>
         </div>
