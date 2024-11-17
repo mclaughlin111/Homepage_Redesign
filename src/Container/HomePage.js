@@ -1,9 +1,9 @@
 import About from "../Components/About";
-import Projects from "../Components/Projects";
+import ContentGrid from "../Components/ContentGrid.js";
 import Header from "../Components/Header";
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Tabs from "../Components/Tabs";
+
 import "../footer.css";
 import Error from "../Components/Error";
 import { useEffect } from "react";
@@ -17,11 +17,11 @@ const pageRoutes = createBrowserRouter([
     children: [
       {
         path: "/", // Root path for Header
-        element: <Tabs />,
+        element: <ContentGrid />,
       },
       {
         path: "/projects/",
-        element: <Tabs />,
+        element: <ContentGrid />,
       },
       {
         path: "/about/",
