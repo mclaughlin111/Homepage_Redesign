@@ -17,13 +17,13 @@ const Projects = () => {
   const handleToggleComponent = (component) => {
     setActiveComponent(component);
     // Check the current mode and apply the appropriate class
-    const activeIcons = document.querySelectorAll('.activeIcon');
+    const activeIcons = document.querySelectorAll(".activeIcon");
     if (activeIcons.length > 0) {
       activeIcons.forEach((activeIcon) => {
         if (isLightMode) {
-          activeIcon.classList.add('activeIconLight');
+          activeIcon.classList.add("activeIconLight");
         } else {
-          activeIcon.classList.remove('activeIconLight');
+          activeIcon.classList.remove("activeIconLight");
         }
       });
     }
@@ -33,7 +33,9 @@ const Projects = () => {
     <div>
       <nav>
         <ul>
-          <div className={activeComponent === "contentList" ? "activeIcon" : ""}>
+          <div
+            className={activeComponent === "contentList" ? "activeIcon" : ""}
+          >
             <li
               className={activeComponent === "contentList" ? "active" : ""}
               onClick={() => handleToggleComponent("contentList")}
@@ -42,7 +44,11 @@ const Projects = () => {
             </li>
           </div>
 
-          <div className={activeComponent === "ContentCarousel" ? "activeIcon" : ""}>
+          <div
+            className={
+              activeComponent === "ContentCarousel" ? "activeIcon" : ""
+            }
+          >
             <li
               className={activeComponent === "ContentCarousel" ? "active" : ""}
               onClick={() => handleToggleComponent("ContentCarousel")}
@@ -51,7 +57,9 @@ const Projects = () => {
             </li>
           </div>
 
-          <div className={activeComponent === "contentGrid" ? "activeIcon" : ""}>
+          <div
+            className={activeComponent === "contentGrid" ? "activeIcon" : ""}
+          >
             <li
               className={activeComponent === "contentGrid" ? "active" : ""}
               onClick={() => handleToggleComponent("contentGrid")}

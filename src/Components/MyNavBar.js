@@ -1,6 +1,6 @@
 // Import necessary dependencies
 import React, { useState } from "react";
-import { motion} from "framer-motion";
+import { motion } from "framer-motion";
 import "../navbar.css";
 
 // Your navigation items

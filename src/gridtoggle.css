@@ -7,6 +7,7 @@ button {
     cursor: pointer;
     outline: inherit;
     transform: translateY(1.5px);
+
 }
 
 .gridToggleContainer {
@@ -19,5 +20,6 @@ button {
     padding: 5px;
     border-radius: 25px;
     box-shadow: var(--shadow-elevation-low);
+    border: solid white 1px;
 
 }

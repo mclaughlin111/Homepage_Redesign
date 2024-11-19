@@ -1,0 +1,90 @@
+/* Refactored media queries */
+@media screen and (max-width: 1499px) {
+
+    .title,
+    .switch,
+    .divLine {
+        font-size: 1.5rem;
+    }
+}
+
+/* mobile */
+@media screen and (min-width: 1px) and (max-width: 600px) {
+
+    .title {
+        font-size: 1.7rem;
+        margin-left: 0;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        text-align: center;
+        text-wrap: nowrap;
+        margin: 0px;
+
+    }
+
+
+    #switcher {
+        /* padding-bottom: 1em; */
+
+    }
+
+    .switch,
+    .divLine {
+        font-size: 1.7rem;
+    }
+
+    .pageHeader {
+        display: flex;
+        height: 65px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .headerBorder {
+        height: 2px;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .about {
+        margin-top: 0;
+    }
+
+    .pageHeaderScroll #switcher {
+        /* display: none; */
+
+    }
+
+    /* MOBILE MEDIA .pageHeaderScroll */
+    .pageHeaderScroll {
+
+        height: 3em;
+        margin-right: 0em;
+        margin-left: 0em;
+
+        z-index: 2;
+        transition: padding 300ms ease-in-out, margin-left 500ms ease-in-out, margin-right 500ms ease-in-out, margin-top 500ms ease-in-out, justify-content 300ms ease-in-out, border-radius 300ms ease-in-out, transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 799px) {
+    /* Add styles for this range if needed */
+}
+
+@media screen and (min-width: 1399px) and (max-width: 1499px) {
+
+    .title,
+    .switch,
+    .divLine {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+
+    .title,
+    .switch,
+    .divLine {
+        font-size: 1.8rem;
+    }
+}

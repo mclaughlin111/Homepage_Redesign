@@ -1,0 +1,45 @@
+/* Refactored switch classes */
+.switch,
+.switchlight {
+    font-family: Gill sans;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    transition: color 0.28s ease-in-out;
+}
+
+/* Updated #line styles */
+.divLine {
+    font-family: Gill sans;
+    font-weight: normal;
+    opacity: 0.3;
+    cursor: default;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.switch {
+    color: rgb(93, 92, 92);
+
+}
+
+.switch:focus,
+.switcher {
+    color: white;
+}
+
+.switchlight:focus {
+    color: black;
+}
+
+.switchlight {
+    color: rgb(93, 92, 92);
+}
+
+.switch:hover {
+    color: white;
+}
+
+.switchlight:hover {
+    color: black;
+}

@@ -1,0 +1,43 @@
+.squareDivsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 25px;
+    /* Total width: 5 squares + spacing */
+    height: 3px;
+    /* Height matches the individual squares */
+    margin-left: 5px;
+    margin-top: 3px;
+}
+
+.square {
+    width: 5px;
+    height: 5px;
+    margin: 1 1px;
+    /* Spacing between squares */
+}
+
+.lightest {
+    background-color: #e5e5e5;
+    /* 90% white */
+}
+
+.lighter {
+    background-color: #cccccc;
+    /* Lighter grey */
+}
+
+.medium {
+    background-color: #999999;
+    /* Medium grey */
+}
+
+.darker {
+    background-color: #666666;
+    /* Darker grey */
+}
+
+.darkest {
+    background-color: #333333;
+    /* Dark grey */
+}
