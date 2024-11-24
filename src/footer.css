@@ -1,7 +1,7 @@
 /* footer.css */
 .footer {
     display: flex;
-
+    font-family: "Polymathtext";
     opacity: 100%;
     /* height: 100%; */
     font-size: 1.2em;

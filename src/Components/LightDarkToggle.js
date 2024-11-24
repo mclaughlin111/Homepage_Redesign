@@ -39,6 +39,11 @@ const LightDarkToggle = () => {
       document
         .querySelector(".headerBorder")
         .classList.add("headerBorderLight");
+      // Add Light Mode for aboutText
+      const aboutText = document.querySelector(".about-text");
+      if (aboutText) {
+        aboutText.classList.add("about-text-light");
+      }
 
       // Add Light Mode for .activeIcon
       setActiveIconLight(true);
@@ -60,6 +65,12 @@ const LightDarkToggle = () => {
 
       // Remove Light Mode for .activeIcon
       setActiveIconLight(false);
+    }
+
+    // Remove Light Mode for aboutText
+    const aboutText = document.querySelector(".about-text");
+    if (aboutText) {
+      aboutText.classList.remove("about-text-light");
     }
   }, [dark]);
 

@@ -1,23 +1,102 @@
 .about {
   display: flex;
-  align-content: flex-start;
-  text-align: left;
-  font-size: 1.3rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  /* gap: 2rem; */
+  /* padding: 2rem; */
+  font-family: PolymathText;
+  color: #282828;
+}
+
+@media (min-width: 768px) {
+  .about {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.about-text {
+  max-width: 600px;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+.about-text-light {
+
+  color: rgb(0, 0, 0);
+}
+
+
+h3 {
+  font-size: 2rem;
+
+}
+
+.paragraph {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.paragraph:nth-of-type(1) {
+  color: #666;
+}
+
+.paragraph:nth-of-type(2) {
+  color: #888;
+}
+
+.paragraph:nth-of-type(3) {
+  color: #aaa;
+}
+
+.cvLink {
+  color: #007acc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cvLink:hover {
+  text-decoration: underline;
 }
 
 .aboutPageBreak {
-  margin-bottom: 0%;
+  margin: 1.5rem 0;
+  border: 0;
+  height: 1px;
+  background: #ddd;
 }
 
-.aboutList {
-
-
-  margin-top: 0%;
-  font-size: 1rem;
+.about-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.subline {
+.profileImage {
+  width: 450px;
 
-  text-align: left;
-  margin-bottom: 0;
+  border: px solid #ddd;
+  transition: transform 300ms ease-in-out;
+}
+
+.profileImage:hover {
+  transform: scale(1.01);
+}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 1024px) {
+  h3 {
+    font-size: 2.5rem;
+  }
+
+  .paragraph {
+    font-size: 1.2rem;
+  }
 }

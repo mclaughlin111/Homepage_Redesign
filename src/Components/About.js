@@ -6,21 +6,15 @@ import "../Styling/about.css";
 const About = () => {
   return (
     <div className="about">
-      <div>
+      <div className="about-text">
         <h3>Software Engineer for Lloyds Banking Group</h3>
-
-        <p>Based in Bristol, UK</p>
-
+        <p className="paragraph">Based in Bristol, UK</p>
         <hr className="aboutPageBreak" />
-
-        <div className="aboutList">
-          <p>
-            <strong>Likes doing: </strong> web development, music, photography,
-            design, running, cycling, cooking
-          </p>
-        </div>
-
-        <p>
+        <p className="paragraph">
+          <strong>Likes doing: </strong> web development, music, photography,
+          design, running, cycling, cooking
+        </p>
+        <p className="paragraph">
           Download{" "}
           <a
             className="cvLink"
@@ -29,34 +23,31 @@ const About = () => {
             CV
           </a>
         </p>
-
-        <p>
+        <p className="paragraph">
           Links:{" "}
           <a className="cvLink" href="https://github.com/mclaughlin111">
-            Github{""}
+            Github
           </a>{" "}
           |{" "}
           <a
             className="cvLink"
             href="https://www.linkedin.com/in/thomas-mclaughlin-312299179/"
           >
-            {" "}
             LinkedIn
           </a>{" "}
           |{" "}
           <a className="cvLink" href="https://www.instagram.com">
-            {" "}
             Instagram
           </a>{" "}
           |{" "}
           <a className="cvLink" href="https://www.youtube.com">
-            {" "}
-            Youtube{" "}
+            Youtube
           </a>
         </p>
       </div>
-
-      <img src={Profile} alt="Profile" className="profileImage" />
+      <div className="about-image-container">
+        <img src={Profile} alt="Profile" className="profileImage" />
+      </div>
     </div>
   );
 };

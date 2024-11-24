@@ -40,19 +40,19 @@
         padding: 0px;
         margin: 0px;
 
+
+
+        .headerBorder {
+            height: 2px;
+            margin-left: 1em;
+            margin-right: 1em;
+        }
+
+        .about {
+            margin-top: 0;
+        }
+
     }
-
-    .headerBorder {
-        height: 2px;
-        margin-left: 1em;
-        margin-right: 1em;
-    }
-
-    .about {
-        margin-top: 0;
-    }
-
-
 
     /* MOBILE MEDIA .pageHeaderScroll */
     .pageHeaderScroll {
