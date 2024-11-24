@@ -32,9 +32,11 @@ const ContentGrid = () => {
                   className="gridImage"
                 />
               </a>
-              <div className="overlay">
-                <p className="overlay-text">{item.description}</p>
-              </div>
+              <a href={item.link}>
+                <div className="overlay">
+                  <p className="overlay-text">{item.description}</p>
+                </div>
+              </a>
             </div>
           </div>
         ))}

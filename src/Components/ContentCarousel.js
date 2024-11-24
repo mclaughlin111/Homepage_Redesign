@@ -28,6 +28,7 @@ const ContentCarousel = () => {
                 transitionSpeed={2000}
                 gyroscope
               >
+                <p className="carouselItemDescription">{item.name}</p>
                 <a href={item.link}>
                   <img
                     src={process.env.PUBLIC_URL + "/" + item.image}
@@ -35,7 +36,6 @@ const ContentCarousel = () => {
                     className="carousel-image"
                   />
                 </a>
-                <p className="carouselItemDescription">{item.name}</p>
               </Tilt>
             </div>
           ))}

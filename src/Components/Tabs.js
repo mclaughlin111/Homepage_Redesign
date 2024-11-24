@@ -110,9 +110,8 @@ const TabsNav = styled.div`
 
   /* Breakpoint for mobile view */
   @media (max-width: 600px) {
-    position: static; /* Switch to static position for mobile view */
-    top: unset;
-    padding: 0.5em 0; /* Adjust padding for better alignment */
+    /* top: unset; */
+    padding: 0em 0; /* Adjust padding for better alignment */
   }
 `;
 
