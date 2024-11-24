@@ -23,7 +23,7 @@ const ContentCarousel = () => {
               <Tilt
                 tiltEnable
                 tiltReverse={false}
-                scale={0.97}
+                scale={0.9}
                 tiltMaxAngleX={25}
                 transitionSpeed={2000}
                 gyroscope

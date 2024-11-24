@@ -1,5 +1,6 @@
 import About from "../Components/About";
 import ContentGrid from "../Components/ContentGrid.js";
+import Tabs from "../Components/Tabs.js";
 import Header from "../Components/Header";
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -9,6 +10,7 @@ import Error from "../Components/Error";
 import { useEffect } from "react";
 import { Gradient } from "../Components/Gradient.js";
 import "../gradient.css";
+import { ScrollingFooter } from "../Components/ScrollingFooter.js";
 
 const pageRoutes = createBrowserRouter([
   {
@@ -17,11 +19,11 @@ const pageRoutes = createBrowserRouter([
     children: [
       {
         path: "/", // Root path for Header
-        element: <ContentGrid />,
+        element: <Tabs />,
       },
       {
         path: "/projects/",
-        element: <ContentGrid />,
+        element: <Tabs />,
       },
       {
         path: "/about/",
@@ -41,7 +43,10 @@ const HomePage = () => {
       <main style={{ flex: 1 }}>
         <RouterProvider router={pageRoutes} />
       </main>
-      <footer className="footer">©2024</footer>
+
+      <footer className="footer">
+        <ScrollingFooter />
+      </footer>
     </>
   );
 };

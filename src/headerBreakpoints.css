@@ -1,8 +1,7 @@
 /* Refactored media queries */
 @media screen and (max-width: 1499px) {
 
-    .title,
-    .switch,
+    .title .switch,
     .divLine {
         font-size: 1.5rem;
     }
@@ -10,6 +9,10 @@
 
 /* mobile */
 @media screen and (min-width: 1px) and (max-width: 600px) {
+
+    .headerBorder {
+        display: none;
+    }
 
     .title {
         font-size: 1.7rem;
@@ -23,7 +26,7 @@
     }
 
 
-    #switcher {
+    .switcher {
         /* padding-bottom: 1em; */
 
     }
@@ -67,18 +70,20 @@
     }
 }
 
-@media screen and (min-width: 501px) and (max-width: 799px) {
+/* @media screen and (min-width: 501px) and (max-width: 799px) {
     /* Add styles for this range if needed */
-}
 
-@media screen and (min-width: 1399px) and (max-width: 1499px) {
+@media screen and (min-width: 601px) and (max-width: 1499px) {
+    .title {
+        font-size: 1.5rem;
+    }
 
-    .title,
-    .switch,
-    .divLine {
+    .switcher {
         font-size: 1.5rem;
     }
 }
+
+
 
 @media screen and (min-width: 1500px) {
 

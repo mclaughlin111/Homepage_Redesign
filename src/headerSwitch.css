@@ -1,7 +1,7 @@
 /* Refactored switch classes */
 .switch,
 .switchlight {
-    font-family: Gill sans;
+
     text-decoration: none;
     font-style: normal;
     font-weight: normal;
@@ -10,7 +10,7 @@
 
 /* Updated #line styles */
 .divLine {
-    font-family: Gill sans;
+
     font-weight: normal;
     opacity: 0.3;
     cursor: default;
@@ -20,6 +20,16 @@
 
 .switch {
     color: rgb(93, 92, 92);
+
+}
+
+.switch.active {
+    color: white;
+    /* Default focused color */
+}
+
+.switchlight.active {
+    color: black;
 
 }
 

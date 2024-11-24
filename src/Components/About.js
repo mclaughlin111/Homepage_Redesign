@@ -1,7 +1,7 @@
 import React from "react";
 import Profile from "../Assets/profile.jpeg";
 import "../index.css";
-import "../about.css";
+import "../Styling/about.css";
 
 const About = () => {
   return (

@@ -5,10 +5,11 @@ import { Link, Outlet } from "react-router-dom";
 import { TbMail } from "react-icons/tb";
 import { motion } from "framer-motion";
 
-import "../header.css";
+import "../Styling/header.css";
 import "../headerBreakpoints.css";
 import "../headerSwitch.css";
 import { SquareDivs } from "./SquareDivs";
+import { DivBorder } from "./DivBorder";
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
@@ -61,7 +62,7 @@ const Header = () => {
             <SquareDivs />
           </div>
 
-          <div id="switcher">
+          <div className="switcher">
             <Link className="switch" id="projects" to="/projects">
               Projects
             </Link>
@@ -101,7 +102,7 @@ const Header = () => {
             <p>Tom McLaughlin </p>
           </div>
 
-          <div id="switcher">
+          <div className="switcher">
             <Link className="switch" id="projects" to="/projects">
               Projects
             </Link>
@@ -122,6 +123,7 @@ const Header = () => {
             </span>
           </div>
         </header>
+        <DivBorder />
         <div className="headerBorder"></div>
       </motion.div>
       <Outlet />

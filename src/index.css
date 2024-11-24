@@ -5,6 +5,21 @@ html,
   height: 100%;
 }
 
+@font-face {
+  font-family: 'PolymathText';
+  src: url('./Fonts/PolymathDemo-Regular.woff') format('woff'),
+    url('./Fonts/PolymathDemo-Regular.woff2') format('woff');
+  font-weight: 100 900;
+  /* Adjust based on font weights available */
+  font-style: normal;
+  /* Adjust if italics are included */
+}
+
+body {
+  font-family: 'PolymathTextDemo', sans-serif;
+
+}
+
 body {
   margin: 0;
 }
@@ -119,14 +134,6 @@ a {
 
 }
 
-@media screen and (min-width: 501px) and (max-width: 799px) {}
-
-
-/* desktop, tablet,  */
-@media screen and (min-width: 1399px) and (max-width: 1499px) {}
-
-
-@media screen and (min-width: 1500px) {}
 
 /* END MEDIA QUERIES */
 
@@ -142,8 +149,8 @@ body {
 
 
 .bodylight {
-  background-color: #fbf4ed;
-  color: rgb(64, 64, 64);
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
 }
 
 

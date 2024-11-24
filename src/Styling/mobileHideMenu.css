@@ -1,0 +1,32 @@
+/* Dot Menu */
+.dotMenu {
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 1.3s ease;
+}
+
+.dotMenu:hover {
+    transform: scale(1.2);
+}
+
+/* Links Container */
+.switcher {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    position: relative;
+}
+
+.menuLinks {
+    flex-direction: row;
+    gap: 0.5em;
+    display: none;
+    opacity: 0;
+}
+
+.menuLinksVisible {
+    display: flex;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out !important;
+}

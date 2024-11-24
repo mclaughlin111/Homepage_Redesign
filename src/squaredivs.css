@@ -8,6 +8,7 @@
     /* Height matches the individual squares */
     margin-left: 5px;
     margin-top: 3px;
+    mix-blend-mode: multiply;
 }
 
 .square {

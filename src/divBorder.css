@@ -1,0 +1,60 @@
+.divBorderContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* Spans the width of the header */
+    height: 5px;
+    /* Adjust height as needed */
+    margin-left: 18px;
+    margin-right: 18px;
+    /* Remove any spacing */
+}
+
+.divSquare {
+    flex-grow: 1;
+    /* Ensures equal spacing across width */
+    height: 4px;
+    /* Matches height of the container */
+    margin: 0;
+    /* No gaps between squares */
+}
+
+.gradient-1 {
+    background-color: #e5e5e5;
+    /* Lightest shade */
+}
+
+.gradient-2 {
+    background-color: #dcdcdc;
+    /* Slightly darker */
+}
+
+.gradient-3 {
+    background-color: #cccccc;
+}
+
+.gradient-4 {
+    background-color: #b3b3b3;
+}
+
+.gradient-5 {
+    background-color: #999999;
+}
+
+.gradient-6 {
+    background-color: #808080;
+}
+
+.gradient-7 {
+    background-color: #666666;
+}
+
+.gradient-8 {
+    background-color: #4d4d4d;
+}
+
+.gradient-9 {
+    background-color: #333333;
+    /* Darkest shade */
+}

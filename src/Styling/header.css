@@ -11,62 +11,67 @@
     0px 1px 1.2px hsl(var(--shadow-color) / 0.65),
     0.4px 27.1px 33.7px -0.8px hsl(var(--shadow-color) / 0.85),
     1.7px 106px 132px -1.7px hsl(var(--shadow-color) / 1);
-  --animation-header: 350ms ease-in-out;
+  --animation-header: 250ms ease-in-out;
   --animation-border: 200ms ease-in-out;
-}
-
-.scrollContainer {
-  position: sticky;
 }
 
 .headerContainer {
   position: sticky;
   top: 0;
-  z-index: 99;
+
 }
 
 .pageHeader {
-  height: 5em;
+  height: 3.5em;
+  top: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   margin-right: 1em;
+  /* Slightly increased to match the scroll version */
   margin-left: 1em;
-  padding: 0px 0em;
+  margin-top: 1em;
+  /* Slightly increased to match the scroll version */
+  padding: 0.5em 0em;
   position: sticky;
-  top: 0;
-  z-index: 2;
-  backdrop-filter: blur(3px);
-  border-radius: 0px;
-  transition:
-    height 300ms ease-in-out,
-    padding var(--animation-header),
-    margin-left var(--animation-header),
-    margin-top var(--animation-header),
-    margin-right var(--animation-header),
-    border-radius var(--animation-header),
-    transform var(--animation-header),
-    box-shadow 500ms ease-in-out,
+
+  backdrop-filter: blur(5px);
+  /* Middle ground between original and scroll */
+  border-radius: 5px;
+  /* A slight rounding to bridge the gap */
+  transition: all var(--animation-header)
 }
 
 .pageHeaderScroll {
-  height: 3.6em;
-  /* top: 10px; */
-  padding: 0px 2em;
-  border-radius: 50px;
+  top: 0;
+  height: 3em;
+
+  padding: 0.2em 1em;
+
+  border-radius: 10px;
+
   box-shadow: var(--shadow-elevation-low);
-  z-index: 2;
-  /* transition:
-    padding var(--animation-header),
-    margin-left var(--animation-header),
-    margin-right var(--animation-header),
-    margin-top var(--animation-header),
-    justify-content var(--animation-header),
-    border-radius var(--animation-header),
-    transform var(--animation-header),
-    box-shadow 500ms ease-in-out,
-    border 1500ms ease-in-out; */
+
+  margin-top: 1em;
+
+  margin-left: 2em;
+  margin-right: 2em;
+  border-radius: 5px;
+
+  box-shadow: var(--shadow-elevation-low);
+
+  /* Matches the original */
+  background-color: rgba(33, 33, 33, 0.85);
+  /* Slightly more subtle transparency */
+  backdrop-filter: blur(6px);
+  /* Smooth transition from the original */
+}
+
+.pageHeaderScroll:hover {
+  transform: scale(1.01);
+  transition: all 200ms ease-in-out;
+  backdrop-filter: blur(30px);
 }
 
 .headerHeaderLight {
@@ -80,10 +85,7 @@
 /* Header Bottom Border */
 .headerBorder,
 .headerBorderScroll {
-  transition:
-    margin-left var(--animation-border),
-    margin-right var(--animation-border),
-    opacity var(--animation-border)
+  transition: all var(--animation-header)
 }
 
 .headerBorder {
@@ -93,8 +95,6 @@
   z-index: 1;
   height: 2px;
   background-color: white;
-  transition-delay: 250ms;
-
 }
 
 .headerBorderScroll {
@@ -135,27 +135,20 @@
 
 .title {
   margin-left: 0em;
-  mix-blend-mode: multiply;
-  font-family: Gill sans;
+  /* font-family: Gill sans; */
   display: flex;
   align-items: center;
-  /* padding: 0.9em; */
-  /* border: 1.5em; */
-  transition: padding 150ms ease-in-out;
-  transition: color 150ms ease-in-out;
+
 }
 
 .titleScroll {
-  font-family: Gill sans;
   border: 1.5em;
-  color: grey;
+  color: rgb(93, 92, 92);
 }
 
-.title:hover {
-  /* background-color: rgba(255, 255, 255, 0.102); */
-}
 
-#switcher {
+
+.switcher {
   display: flex;
   align-self: center;
 }

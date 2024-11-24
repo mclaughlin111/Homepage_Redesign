@@ -106,13 +106,12 @@ const TabsNav = styled.div`
 `;
 
 const Tab = styled.a`
-  padding: 16px 10px;
-  font-size: 1rem;
+  padding: 16px 6px;
+  font-size: 1.5rem;
   color: hsl(0 0% 43.5%);
   display: inline-block;
   position: relative;
   cursor: pointer;
-  transition: color 3500ms ease-in-out;
   &:active {
   }
 `;
@@ -120,13 +119,13 @@ const Tab = styled.a`
 const TabsHighlight = styled.div`
   background: hsl(0 0% 90.9%);
   position: absolute;
-  top: 11px;
+  top: 15px;
   left: 0;
-  border-radius: 4px;
-  height: 29px;
-  transition: 175ms ease-in-out;
+  border-radius: 5px;
+  height: 25px;
+  transition: 150ms ease-in-out;
 
-  transition-property: width, transform, opacity;
+  transition-property: width, transform;
 `;
 
 export default Tabs;
