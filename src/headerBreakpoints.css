@@ -16,19 +16,13 @@
 
     .title {
         font-size: 1.7rem;
-        margin-left: 0;
-        margin-bottom: 0px;
-        padding-bottom: 0px;
         text-align: center;
-        text-wrap: nowrap;
-        margin: 0px;
-
+        line-height: 1px;
     }
 
 
     .switcher {
-        /* padding-bottom: 1em; */
-
+        padding-bottom: 1em;
     }
 
     .switch,
@@ -38,9 +32,12 @@
 
     .pageHeader {
         display: flex;
-        height: 65px;
+        flex-direction: column;
+        height: auto;
         align-items: center;
-        justify-content: space-between;
+        padding: 0px;
+        margin: 0px;
+
     }
 
     .headerBorder {
@@ -53,20 +50,21 @@
         margin-top: 0;
     }
 
-    .pageHeaderScroll #switcher {
-        /* display: none; */
 
-    }
 
     /* MOBILE MEDIA .pageHeaderScroll */
     .pageHeaderScroll {
 
-        height: 3em;
-        margin-right: 0em;
-        margin-left: 0em;
+        margin-right: 1em;
+        margin-left: 1em;
 
         z-index: 2;
         transition: padding 300ms ease-in-out, margin-left 500ms ease-in-out, margin-right 500ms ease-in-out, margin-top 500ms ease-in-out, justify-content 300ms ease-in-out, border-radius 300ms ease-in-out, transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
+    }
+
+    .pageHeaderScroll>.switcher {
+
+        display: none;
     }
 }
 

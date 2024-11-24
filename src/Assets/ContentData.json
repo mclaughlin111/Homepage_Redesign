@@ -44,5 +44,18 @@
     "description": "Playful experiment testing out CSS and Javascript",
     "link": "https://tommcl.co.uk/divgrid/",
     "image": "assets/divgrid.png"
+  },
+
+  {
+    "name": "Blog",
+    "description": "Short opinionated stories and blog posts, mostly to test out NextJS",
+    "link": "https://tommcl.co.uk/blog/",
+    "image": "assets/blog.jpeg"
+  },
+  {
+    "name": "Strava Activity",
+    "description": "Data representation site for my Strava Activity, retrieved from Stava API",
+    "link": "https://tommcl.co.uk/strava/",
+    "image": "assets/strava.png"
   }
 ]

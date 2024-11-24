@@ -100,9 +100,20 @@ const Tabs = () => {
 };
 
 const TabsNav = styled.div`
-  position: relative;
+  position: sticky;
+  top: 1em; /* Adjust for desktop view */
   display: flex;
   justify-content: center;
+  z-index: 10; /* Ensure it stays above other elements */
+  border-radius: 5px; /* Optional */
+  transition: all var(--animation-header);
+
+  /* Breakpoint for mobile view */
+  @media (max-width: 600px) {
+    position: static; /* Switch to static position for mobile view */
+    top: unset;
+    padding: 0.5em 0; /* Adjust padding for better alignment */
+  }
 `;
 
 const Tab = styled.a`
@@ -124,7 +135,6 @@ const TabsHighlight = styled.div`
   border-radius: 5px;
   height: 25px;
   transition: 150ms ease-in-out;
-
   transition-property: width, transform;
 `;
 

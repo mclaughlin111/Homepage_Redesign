@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import "../Styling/header.css";
 import "../headerBreakpoints.css";
 import "../headerSwitch.css";
+
 import { SquareDivs } from "./SquareDivs";
 import { DivBorder } from "./DivBorder";
 

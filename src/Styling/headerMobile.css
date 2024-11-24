@@ -1,0 +1,27 @@
+@media screen and (min-width: 1px) and (max-width: 600px) {
+
+  .pageHeaderScroll {
+
+
+    padding: 0.2em 1em;
+
+    border-radius: 10px;
+
+    box-shadow: var(--shadow-elevation-low);
+
+    margin-top: 1em;
+
+    margin-left: 2em;
+    margin-right: 2em;
+    border-radius: 5px;
+
+    box-shadow: var(--shadow-elevation-low);
+
+    /* Matches the original */
+    background-color: rgba(33, 33, 33, 0.85);
+    /* Slightly more subtle transparency */
+    backdrop-filter: blur(6px);
+    /* Smooth transition from the original */
+  }
+
+}

@@ -15,7 +15,7 @@ import { ScrollingFooter } from "../Components/ScrollingFooter.js";
 const pageRoutes = createBrowserRouter([
   {
     path: "/",
-    element: <Header />, // <Outlet /> on this component allows access to children.
+    element: <Header />,
     children: [
       {
         path: "/", // Root path for Header
