@@ -43,7 +43,7 @@
   /* Middle ground between original and scroll */
   border-radius: 5px;
   /* A slight rounding to bridge the gap */
-  transition: all var(--animation-header)
+  /* transition: all var(--animation-header) */
 }
 
 .pageHeaderScroll {
