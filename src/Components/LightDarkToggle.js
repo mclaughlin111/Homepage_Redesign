@@ -3,9 +3,17 @@ import Toggle from "react-toggle";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 import { motion } from "framer-motion";
 import { useTheme } from "../Context/Theme";
+import useSound from "use-sound";
+import switchFX from "../Assets/switch.wav";
 
 const LightDarkToggle = () => {
   const { isDarkMode, toggleTheme } = useTheme();
+  const [playFX] = useSound(switchFX);
+
+  const handleToggle = () => {
+    playFX(); // Play sound
+    toggleTheme(); // Toggle the theme
+  };
 
   const toggleDark = (
     <motion.div
@@ -26,7 +34,7 @@ const LightDarkToggle = () => {
     <Toggle
       id="toggleComponent"
       checked={isDarkMode}
-      onClick={toggleTheme}
+      onClick={handleToggle}
       icons={{ checked: toggleDark, unchecked: toggleLight }}
       aria-label="Dark mode toggle"
     />

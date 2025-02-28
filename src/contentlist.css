@@ -4,6 +4,7 @@
   margin-top: 1em;
   text-align: left;
   width: 100%;
+  color: var(--text-color);
 }
 
 /* top row borders */
@@ -14,8 +15,10 @@
 .table img {
   width: 35px;
   height: auto;
-  box-sizing: border-box; /* Include border in width and height calculations */
-  border: 1px solid transparent; /* Set default border to transparent */
+  box-sizing: border-box;
+  /* Include border in width and height calculations */
+  border: 1px solid transparent;
+  /* Set default border to transparent */
   transition: border 0.2s ease-in-out;
 }
 

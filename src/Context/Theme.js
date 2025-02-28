@@ -23,6 +23,12 @@ export const ThemeProvider = ({ children }) => {
       }
     };
 
+    // Set the `data-theme` attribute to toggle themes globally
+    document.documentElement.setAttribute(
+      "data-theme",
+      isDarkMode ? "dark" : "light"
+    );
+
     const applyTheme = () => {
       if (isDarkMode) {
         // Remove Light Mode styles

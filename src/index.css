@@ -1,8 +1,28 @@
 html,
 #root {
-
   margin: 0;
-  height: 100%;
+  /* height: 100%; */
+}
+
+/* Global Theme Variables */
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --header-background: #f0f0f0;
+  --header-border: #d0d0d0;
+  --link-color: #007acc;
+  --footer-background: #ffffff;
+  --footer-text-color: #000000;
+}
+
+[data-theme="dark"] {
+  --background-color: #000000;
+  --text-color: #ffffff;
+  --header-background: #222222;
+  --header-border: #ffffff;
+  --link-color: #66b3ff;
+  --footer-background: #000000;
+  --footer-text-color: #ffffff;
 }
 
 @font-face {
@@ -17,7 +37,6 @@ html,
 
 body {
   font-family: 'PolymathText', sans-serif;
-
 }
 
 body {
@@ -26,39 +45,11 @@ body {
 
 main {
   display: flex;
+
   flex-direction: column;
 }
 
-/* MAX KOHLER ROOT CSS styles */
-:root {
-  --font-text: "Atlas", serif;
-  --font-sans: "Atlas", "Arial", sans-serif;
-  --font-mono: "Consolas", "Lucida Console", Courier Prime, monospace;
-  --ratio: 1.2;
-  --ms-0: clamp(0.9rem, calc(1.3vw + 0.2rem), 1.25rem);
-  --ms--2: calc(var(--ms--1) / var(--ratio));
-  --ms--1: calc(var(--ms-0) / var(--ratio));
-  --ms-1: calc(var(--ms-0) * var(--ratio));
-  --ms-2: calc(var(--ms-1) * var(--ratio));
-  --ms-3: calc(var(--ms-2) * var(--ratio));
-  --ms-4: calc(var(--ms-3) * var(--ratio));
-  --ms-5: calc(var(--ms-4) * var(--ratio));
-  --ms-6: calc(var(--ms-5) * var(--ratio));
-  --ms-7: calc(var(--ms-6) * var(--ratio));
-  --ms-text: calc(var(--ms-0));
-  --black: rgb(8, 8, 8);
-  --gray: rgb(102, 104, 105);
-  --lightgray: rgb(238, 237, 234);
-  --white: #fff;
-  --mark: rgb(249, 237, 181);
-  --background: rgb(253, 253, 253);
-  --blue: #2e50a6;
-  --red: #c4320a;
-  --fast: 300ms;
-  --br: 3px;
-  --padding: var(--ms-0);
-  --baseline: calc(var(--ms-0) * 1.45);
-}
+
 
 a {
   color: var(--blue)
@@ -95,8 +86,6 @@ a {
 .cvLink {
   color: rgb(0, 191, 255);
 }
-
-
 
 
 
@@ -138,9 +127,9 @@ a {
 /* END MEDIA QUERIES */
 
 body {
-  background-color: black;
+  background-color: var(--background-color);
+
   color: white;
-  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
   font-family: "Work Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 450;
@@ -148,10 +137,7 @@ body {
 }
 
 
-.bodylight {
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-}
+
 
 
 #gameImage {

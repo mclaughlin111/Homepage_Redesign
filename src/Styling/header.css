@@ -32,31 +32,30 @@
   align-items: center;
   justify-content: space-between;
   margin-right: 1em;
-  /* Slightly increased to match the scroll version */
+
   margin-left: 1em;
   margin-top: .5em;
-  /* Slightly increased to match the scroll version */
+
   padding: 0.5em 0em;
   position: sticky;
 
   backdrop-filter: blur(5px);
-  /* Middle ground between original and scroll */
+
   border-radius: 5px;
-  /* A slight rounding to bridge the gap */
-  /* transition: all var(--animation-header) */
+
 }
 
 .pageHeaderScroll {
   top: 0;
   height: 3em;
-  z-index: 9999;
+  z-index: 999;
   padding: 0.2em 1em;
 
   border-radius: 10px;
 
   box-shadow: var(--shadow-elevation-low);
 
-  margin-top: 1em;
+  margin-top: 4em;
 
   margin-left: 2em;
   margin-right: 2em;
@@ -65,7 +64,7 @@
   box-shadow: var(--shadow-elevation-low);
 
   /* Matches the original */
-  background-color: rgba(33, 33, 33, 0.85);
+  /* background-color: rgba(33, 33, 33, 0.85); */
   /* Slightly more subtle transparency */
   backdrop-filter: blur(6px);
   /* Smooth transition from the original */
@@ -84,6 +83,7 @@
   position: sticky;
   flex-direction: row;
   justify-content: space-between;
+  background-color: black;
 }
 
 /* Header Bottom Border */
@@ -98,7 +98,7 @@
   position: sticky;
   z-index: 1;
   height: 2px;
-  background-color: white;
+  background-color: var(--header-border);
 }
 
 .headerBorderScroll {
@@ -106,10 +106,6 @@
   justify-items: center;
   align-content: center;
   opacity: 0;
-}
-
-.headerBorderLight {
-  background-color: black;
 }
 
 
@@ -138,8 +134,8 @@
 }
 
 .title {
+  color: var(--text-color);
   margin-left: 0em;
-  /* font-family: Gill sans; */
   display: flex;
   align-items: center;
 
@@ -150,9 +146,11 @@
   color: rgb(93, 92, 92);
 }
 
-
-
 .switcher {
   display: flex;
   align-self: center;
+}
+
+.divLine {
+  color: gray !important;
 }

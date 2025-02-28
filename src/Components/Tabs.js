@@ -8,6 +8,7 @@ import { BsGridFill } from "react-icons/bs";
 import { PiListBold } from "react-icons/pi";
 import useSound from "use-sound";
 import clickFX from "../Assets/click.wav";
+import "../projects.css";
 
 const tabsData = [
   {
@@ -116,7 +117,7 @@ const TabsNav = styled.div`
 `;
 
 const Tab = styled.a`
-  padding: 16px 6px;
+  padding: 10px 6px;
   font-size: 1.5rem;
   color: hsl(0 0% 43.5%);
   display: inline-block;
@@ -128,12 +129,13 @@ const Tab = styled.a`
 
 const TabsHighlight = styled.div`
   background: hsl(0 0% 90.9%);
+
   position: absolute;
-  top: 15px;
+  top: 9px;
   left: 0;
   border-radius: 5px;
   height: 25px;
-  transition: 150ms ease-in-out;
+  transition: 200ms ease-in-out;
   transition-property: width, transform;
 `;
 

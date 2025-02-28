@@ -1,16 +1,17 @@
 /* footer.css */
 .footer {
-    display: flex;
+    /* display: flex; */
+
     font-family: "Polymathtext";
     opacity: 100%;
-    /* height: 100%; */
+
     font-size: 1.2em;
     z-index: 100;
     justify-content: right;
     width: 100%;
     position: fixed;
     bottom: 0;
-    background-color: black;
+    background-color: var(--footer-background);
 
 }
 

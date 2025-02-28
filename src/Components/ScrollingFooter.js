@@ -12,13 +12,13 @@ export const ScrollingFooter = () => {
     };
 
     updateDateTime();
-    const interval = setInterval(updateDateTime, 1000); // Update every second for live time
+    const interval = setInterval(updateDateTime, 6000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <Marquee speed={20}>
-      <span className="copyright">©2024 </span> &nbsp;|&nbsp;
+      <span className="copyright">©2025 </span> &nbsp;|&nbsp;
       {currentDateTime}
     </Marquee>
   );
